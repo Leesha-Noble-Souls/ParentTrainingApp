@@ -8,8 +8,19 @@ def index(request):
 
 def detail(request, lessonPlan_id):
     try:
-        print(lessonPlan_id)
         lessonPlan = LessonPlan.objects.get(pk = lessonPlan_id)
+        link = str(LessonPlan.objects.get(pk = lessonPlan_id).link)
+        YT1 = "youtube.com"
+        YT2 = "youtu.be"
+        index = link.find(YT1)
+        if index == -1:
+            index = link.find(YT2)
+            YT = YT2
+        else:
+            YT = YT1
+        print(index)
+        link = link[:index] + YT1 + "/embed" + link[index+len(YT):]
+        print(link)
     except:
         raise Http404("Lesson plan does not exist")
-    return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan})
+    return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'link' : link})
