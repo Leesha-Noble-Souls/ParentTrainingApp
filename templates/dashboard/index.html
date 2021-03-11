@@ -1,0 +1,18 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Intro -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            {% for plan in available_plans %}
+            <li> 
+                <a href="{% url 'lessonPlans:detail' plan.id %}">{{plan.name}}</a>
+            </li>
+            {% endfor %}  
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+{% endblock %}

@@ -50,9 +50,15 @@
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="#projects">REGISTER</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{% url 'logout'%}">SIGN OUT</a>
+            </li>
+            {% else %}
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'login'%}">SIGN IN</a>
             </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

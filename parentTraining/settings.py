@@ -125,6 +125,6 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
 SESSION_SAVE_EVERY_REQUEST = True
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard'
 
 AUTH_USER_MODEL = 'dashboard.Parent'

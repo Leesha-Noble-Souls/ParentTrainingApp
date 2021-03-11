@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('lessonPlans/', include('lessonPlans.urls')),
     path('admin/', admin.site.urls),
+    path('dashboard/', include('dashboard.urls'))
 ]
 
 if settings.DEBUG:
