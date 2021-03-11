@@ -14,7 +14,7 @@ class LessonPlan(models.Model):
     # visibility = models.BooleanField(default = not VISIBLE)
     # lesson_status = models.BooleanField(default = not DONE)
     # feedback_status = models.BooleanField(default = not RECEIVED)
-    assigned_users = models.ManyToManyField(User)
+    # assigned_users = models.ManyToManyField(User)
 
     def __str__(self):
         return self.topic
