@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from dashboard.models import Parent
 
 VISIBLE = True
 DONE = True
@@ -14,7 +14,7 @@ class LessonPlan(models.Model):
     # visibility = models.BooleanField(default = not VISIBLE)
     # lesson_status = models.BooleanField(default = not DONE)
     # feedback_status = models.BooleanField(default = not RECEIVED)
-    # assigned_users = models.ManyToManyField(User)
+    assigned_users = models.ManyToManyField(Parent)
 
     def __str__(self):
         return self.topic
