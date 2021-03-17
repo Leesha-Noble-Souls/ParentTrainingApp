@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 
 from lessonPlans.models import LessonPlan
 
+@login_required
 def dashboard(request):
     current_user = request.user
     available_plans = []
