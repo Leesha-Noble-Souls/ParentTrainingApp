@@ -3,16 +3,43 @@
 
 {% block content %}
 
-    <!-- Intro -->
+<div id="intro" class="basic-1">
+    <div class="container">
+        <div class="row align-items-center">
+
+                <div class="text-container">
+                    <h2>Welcome To Your Dashboard!</h2>
+                    <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
+                </div> 
+            
+        </div> 
+    </div> 
+</div> 
     <div id="intro" class="basic-1">
         <div class="container">
-            {% for plan in available_plans %}
-            <li> 
-                <a href="{% url 'lessonPlans:detail' plan.id %}">{{plan.name}}</a>
-            </li>
-            {% endfor %}  
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of intro -->
+            <table style="width: 100%;">
+                <tr>
+                    <th>Lesson Name</th>
+                    <th>Topic(s)</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="divider"><hr /></td>
+                </tr>
+                {% for plan in available_plans %}
+                <tr>
+                    <th><a href="{% url 'lessonPlans:detail' plan.id %}">{{plan.name}}</a></th>
+                    <th>
+                        {% for topic in plan.topics %}
+                        {{ topic }} 
+                        {% endfor %}
+                    </th>
+                </tr>
+
+                {% endfor %}  
+            </table>
+
+        </div> 
+    </div> 
+
 
 {% endblock %}

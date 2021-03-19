@@ -9,5 +9,5 @@ def dashboard(request):
     available_plans = []
     for plan in LessonPlan.objects.all():
         if current_user in plan.assigned_users.all():
-            available_plans.append({"name": plan.title, "id" : plan.id})
+            available_plans.append({"name": plan.title, "id" : plan.id, "topics" : plan.topics.all()})
     return render(request, "dashboard/index.html", {"available_plans" : available_plans})
