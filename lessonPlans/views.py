@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 
 from .models import LessonPlan
@@ -23,4 +23,6 @@ def detail(request, lessonPlan_id):
         print(link)
     except:
         raise Http404("Lesson plan does not exist")
-    return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'link' : link})
+    if lessonPlan.public or (request.user in lessonPlan.assigned_users.all()):
+        return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'link' : link})
+    return redirect('/accounts/login')
