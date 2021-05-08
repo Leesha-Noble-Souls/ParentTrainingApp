@@ -19,7 +19,7 @@ class LessonPlan(models.Model):
     activity = models.TextField()
     link = models.URLField(blank = True)
     public = models.BooleanField(default = not VISIBLE) # will the plan be accessed by public (without login)
-    assigned_users = models.ManyToManyField(Parent)
+    assigned_users = models.ManyToManyField(Parent, blank = True)
     topics = models.ManyToManyField(Topic)  # which topic(s) does the lessonPlan belong to
 
     def __str__(self):
