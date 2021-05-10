@@ -1,50 +1,35 @@
+{% extends "navbar.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
+{% block content %}
 
-    <!-- Website Title -->
-    <title>Autism | Home</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
-    <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
-	<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
-	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
-</head>
-<body data-spy="scroll" data-target=".fixed-top">
-
-    <p>Logged out!</p>
-    <a href="{% url 'login'%}">Click here to login again.</a>
-    	
+<div class="logout h-100 text-center">
+  <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+    <h1 class="mb-5">Logged out!</h1>
+    <div class="d-flex">
+    <a class="px-3 h5" href="{% url 'login'%}">Login Again</a>
+    <a class="px-3 h5" href="{% url 'home' %}">Go Back Home</a>
+  </div>
+  </div>
+</div>
+<style>
+  .logout a{
+    transition: all 0.4s ease-out;
+  }
+  .logout ,a:hover{
+    color: black;
+  }
+</style>
+    <!-- No Scripts used on this page -->
     <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="{% static 'js/popper.min.js' %}"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
-    <script src="{% static 'js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
-    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="{% static 'js/morphext.min.js' %}"></script> <!-- Morphtext rotating text in the header -->
-    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script> <!-- Isotope for filter -->
-    <script src="{% static 'js/validator.min.js' %}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
-</body>
-</html>
+    <!-- <script src="{% static 'js/jquery.min.js' %}"></script> jQuery for Bootstrap's JavaScript plugins -->
+    <!-- <script src="{% static 'js/popper.min.js' %}"></script> Popper tooltip library for Bootstrap -->
+    <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> Bootstrap framework -->
+    <!-- <script src="{% static 'js/jquery.easing.min.js' %}"></script> jQuery Easing for smooth scrolling between anchors -->
+    <!-- <script src="{% static 'js/swiper.min.js' %}"></script> Swiper for image and text sliders -->
+    <!-- <script src="{% static 'js/jquery.magnific-popup.js' %}"></script> Magnific Popup for lightboxes -->
+    <!-- <script src="{% static 'js/morphext.min.js' %}"></script> Morphtext rotating text in the header -->
+    <!-- <script src="{% static 'js/isotope.pkgd.min.js' %}"></script> Isotope for filter -->
+    <!-- <script src="{% static 'js/validator.min.js' %}"></script> Validator.js - Bootstrap plugin that validates forms -->
+    <!-- <script src="{% static 'js/scripts.js' %}"></script> Custom scripts -->
+{% endblock %}
