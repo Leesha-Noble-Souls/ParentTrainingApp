@@ -5,41 +5,37 @@
 
 <div id="intro" class="basic-1">
     <div class="container">
-        <div class="row align-items-center">
-
-                <div class="text-container">
-                    <h2>Welcome To Your Dashboard!</h2>
-                    <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
-                </div> 
-            
-        </div> 
+        <h2>Welcome To Your Dashboard!</h2>
+        <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
+    {% for topic, plans in available_plans.items %}
+        <h3>{{topic}}</h3>
+        <div class="d-flex flex-row flex-wrap align-items-center">
+        {% for plan in plans %}
+            <div class="card card-mobile">
+                <div class="card-body">
+                    <h4 class="card-title">{{ plan.title }}</h4>
+                    <p class="card-text d-none d-md-block">{{ plan.aim }}</p>
+                    <a href="{% url 'lessonPlans:detail' plan.id %}" class="btn btn-secondary text-decoration-none">View More</a>     
+                </div>
+            </div>
+        {% endfor %}
+        </div>    
+    {% endfor %}
     </div> 
 </div> 
-    <div id="intro" class="basic-1">
-        <div class="container">
-            <table style="width: 100%;">
-                <tr>
-                    <th>Lesson Name</th>
-                    <th>Topic(s)</th>
-                </tr>
-                <tr>
-                    <td colspan="2" class="divider"><hr /></td>
-                </tr>
-                {% for plan in available_plans %}
-                <tr>
-                    <th><a href="{% url 'lessonPlans:detail' plan.id %}">{{plan.name}}</a></th>
-                    <th>
-                        {% for topic in plan.topics %}
-                        {{ topic }} 
-                        {% endfor %}
-                    </th>
-                </tr>
-
-                {% endfor %}  
-            </table>
-
-        </div> 
-    </div> 
+<style>
+    .card-mobile{
+        margin: 1rem 0.5rem 1rem 0;
+        width: 45%;
+    }
+    @media (min-width: 600px)
+    {
+        .card-mobile {
+            margin: 1rem 1rem 1rem 0;
+            width: 30%;
+        }
+    }
+</style>
 
 
 {% endblock %}
