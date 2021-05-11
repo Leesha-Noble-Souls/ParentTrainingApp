@@ -24,7 +24,7 @@ Install Django on your computer.
    ```
 3. Make migrations
    ```sh
-   python makemigrations
+   python manage.py makemigrations
    ```
    ```sh
    python manage.py migrate --run-syncdb
