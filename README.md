@@ -22,7 +22,14 @@ Install Django on your computer.
    ```sh
    git clone https://github.com/avgupt/ParentTrainingApp.git
    ```
-3. Run the project
+3. Make migrations
+   ```sh
+   python manage.py makemigrations
+   ```
+   ```sh
+   python manage.py migrate --run-syncdb
+   ```
+4. Run the project
    ```sh
    python manage.py runserver
    ```

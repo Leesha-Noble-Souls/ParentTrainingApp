@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.contrib.auth.views import LoginView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.staticfiles import views
 from django.contrib import admin
@@ -33,4 +34,5 @@ if settings.DEBUG:
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/login', LoginView.as_view(redirect_authenticated_user=True), name='login'),
 ]
