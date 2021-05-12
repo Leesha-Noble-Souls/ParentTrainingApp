@@ -7,7 +7,7 @@
     <div class="container">
         <h2>Welcome To Your Dashboard!</h2>
         <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
-    {% for topic, plans in available_plans.items %}
+    {% for topic, plans in topic_to_plans.items %}
         <h3>{{topic}}</h3>
         <div class="d-flex flex-row flex-wrap align-items-center">
         {% for plan in plans %}
