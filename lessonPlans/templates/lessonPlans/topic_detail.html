@@ -1,0 +1,20 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>{{ topic.name }}</h2>
+                        <p><b>Description: </b> {{ topic.description }}</p>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
+
+{% endblock %}
