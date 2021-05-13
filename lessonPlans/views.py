@@ -1,7 +1,8 @@
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 
-from .models import LessonPlan
+from .models import LessonPlan, Topic
 
 def index(request):
     return HttpResponse("Hello, world")
@@ -26,3 +27,11 @@ def detail(request, lessonPlan_id):
     if lessonPlan.public or (request.user in lessonPlan.assigned_users.all()):
         return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'link' : link})
     return redirect('/accounts/login')
+
+def topic_detail(request, topic_id):
+    try:
+        topic = Topic.objects.get(pk = topic_id)
+        description = topic.description
+    except ObjectDoesNotExist:
+        raise Http404("Topic does not exist")
+    return render(request, 'lessonPlans/topic_detail.html', {'topic' : topic})

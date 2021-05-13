@@ -8,7 +8,7 @@
         <h2>Welcome To Your Dashboard!</h2>
         <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
     {% for topic, plans in topic_to_plans.items %}
-        <h3>{{topic}}</h3>
+        <h3><a href = "{% url 'lessonPlans:topic-detail' topic.id %}">{{topic}}</a></h3>
         <div class="d-flex flex-row flex-wrap align-items-center">
         {% for plan in plans %}
             <div class="card card-mobile">
