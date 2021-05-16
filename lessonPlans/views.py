@@ -36,9 +36,8 @@ def topic_detail(request, topic_id):
         plans = []
 
         for plan in LessonPlan.objects.all():
-            if current_user in plan.assigned_users.all():
-                if plan.topics.filter(name = topic.name):
-                    plans.append(plan)
+            if current_user in plan.assigned_users.all() and plan.topics.filter(name = topic.name):
+                plans.append(plan)
 
     except ObjectDoesNotExist:
         raise Http404("Topic does not exist")
