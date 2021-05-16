@@ -32,6 +32,14 @@ def topic_detail(request, topic_id):
     try:
         topic = Topic.objects.get(pk = topic_id)
         description = topic.description
+        current_user = request.user
+        plans = []
+
+        for plan in LessonPlan.objects.all():
+            if current_user in plan.assigned_users.all():
+                for plan_topic in plan.topics.filter(name = topic.name):
+                    plans.append(plan)
+
     except ObjectDoesNotExist:
         raise Http404("Topic does not exist")
-    return render(request, 'lessonPlans/topic_detail.html', {'topic' : topic})
+    return render(request, 'lessonPlans/topic_detail.html', {'topic' : topic, 'plans' : plans})
