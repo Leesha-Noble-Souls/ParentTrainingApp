@@ -37,7 +37,7 @@ def topic_detail(request, topic_id):
 
         for plan in LessonPlan.objects.all():
             if current_user in plan.assigned_users.all():
-                for plan_topic in plan.topics.filter(name = topic.name):
+                if plan.topics.filter(name = topic.name):
                     plans.append(plan)
 
     except ObjectDoesNotExist:
