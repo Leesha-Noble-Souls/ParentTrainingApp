@@ -1,7 +1,10 @@
 from django.db import models
 from dashboard.models import Parent
+from django.utils.translation import ugettext_lazy as _
+import uuid
 
 VISIBLE = True
+
 
 class Topic(models.Model):
     name = models.CharField(max_length = 100, blank = False, unique = True)
@@ -21,6 +24,18 @@ class LessonPlan(models.Model):
     public = models.BooleanField(default = not VISIBLE) # will the plan be accessed by public (without login)
     assigned_users = models.ManyToManyField(Parent, blank = True)
     topics = models.ManyToManyField(Topic)  # which topic(s) does the lessonPlan belong to
-
+    
     def __str__(self):
         return self.title
+
+
+class FeedBack(models.Model):
+    idd = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length = 36)
+    name = models.CharField(max_length = 100, blank = False, unique = True)
+    description = models.TextField()
+    lessons = models.ForeignKey(LessonPlan, on_delete=models.CASCADE)
+    
+    class Meta: 
+        unique_together = ('lessons', 'name');
+    def __str__(self):
+        return str(self.idd)

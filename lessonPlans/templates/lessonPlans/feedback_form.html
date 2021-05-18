@@ -1,0 +1,11 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block content %}
+<form action="/lessonPlans/form" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
