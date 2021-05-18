@@ -1,0 +1,48 @@
+{% extends "navbar.html" %} 
+{% load static %} 
+
+{% block content %}
+
+<div id="intro" class="basic-1">
+    <div class="container">
+        <div class="text-container">
+            <h1>{{ topic.name }}</h1>
+            <p><b>{{ topic.description }}</b></p>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+                                {% for plan in plans %}
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h2 class="card-title">
+                                                {{ plan.title }}
+                                            </h2>
+                                            <p class="card-text">
+                                                {{ plan.aim }}
+                                            </p>
+                                            <a href="{% url 'lessonPlans:detail' plan.id %}" class="btn btn-secondary text-decoration-none">
+                                                View More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
