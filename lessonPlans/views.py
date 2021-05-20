@@ -24,13 +24,14 @@ def get_name(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            post = form.save()
-            post.user = request.user;
-            post.save();
-            context['form']= form
-            print("Hello", FeedBack.objects.all())
-        else:
-            print("Invalid")
+            try:
+                post = form.save(commit = False);
+                
+                post.name = request.user.username + "_" + str(form.cleaned_data['lessons']);
+                context['form']= post
+                post.save();
+            except Exception as e:
+                return render(request, 'lessonPlans/error_form.html')
         return render(request, 'lessonPlans/feedback_form.html', {'form': form})
             # return HttpResponseRedirect('/thanks/')
 

@@ -31,11 +31,10 @@ class LessonPlan(models.Model):
 
 class FeedBack(models.Model):
     idd = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length = 36)
-    name = models.CharField(max_length = 100, blank = False, unique = True)
+    name = models.CharField(max_length = 100, blank = True)
     description = models.TextField()
     lessons = models.ForeignKey(LessonPlan, on_delete=models.CASCADE)
-    
     class Meta: 
-        unique_together = ('lessons', 'name');
+        unique_together = [('name')];
     def __str__(self):
         return str(self.idd)

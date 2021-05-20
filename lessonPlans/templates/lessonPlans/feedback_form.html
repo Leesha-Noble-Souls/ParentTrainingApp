@@ -2,10 +2,11 @@
 {% load static %}
 
 {% block content %}
+<div class = "container">
 <form action="/lessonPlans/form" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
 </form>
-
+</div>
 {% endblock %}
