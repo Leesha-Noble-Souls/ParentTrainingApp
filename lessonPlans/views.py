@@ -15,15 +15,9 @@ def get_name(request):
     context ={}
     if request.method == 'GET':
         return HttpResponse("Yayy")
-    # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
         form = FeedBackForm(request.POST)
-        # check whether it's valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
             try:
                 post = form.save(commit = False);
                 
@@ -33,21 +27,7 @@ def get_name(request):
             except Exception as e:
                 return render(request, 'lessonPlans/error_form.html')
         return render(request, 'lessonPlans/feedback_form.html', {'form': form})
-            # return HttpResponseRedirect('/thanks/')
-
-    # if a GET (or any other method) we'll create a blank form
-    # form = FeedBackForm(request.POST or None, request.FILES or None)
-    # print(form)
-    # # check if form data is valid
-    # if form.is_valid():
-    #     # save the form data to model
-    #     print(form)
-    #     form.save()
-  
-    # context['form']= form
-    # # return HttpResponse("Oye oye")
-
-    # return render(request, 'lessonPlans/feedback_form.html', {'form': form})
+            #
 
 
 def index(request):

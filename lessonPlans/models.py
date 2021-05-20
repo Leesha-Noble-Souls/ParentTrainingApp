@@ -1,6 +1,6 @@
 from django.db import models
 from dashboard.models import Parent
-from django.utils.translation import ugettext_lazy as _
+
 import uuid
 
 VISIBLE = True
