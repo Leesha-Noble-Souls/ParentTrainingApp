@@ -19,8 +19,9 @@ def get_name(request):
         form = FeedBackForm(request.POST)
         if form.is_valid():
             try:
-                post = form.save(commit = False);
                 
+                post = form.save(commit = False);
+                print(request.user)
                 post.name = request.user.username + "_" + str(form.cleaned_data['lessons']);
                 context['form']= post
                 post.save();
@@ -58,6 +59,13 @@ def topic_detail(request, topic_id):
     try:
         topic = Topic.objects.get(pk = topic_id)
         description = topic.description
+        current_user = request.user
+        plans = []
+
+        for plan in LessonPlan.objects.all():
+            if current_user in plan.assigned_users.all() and topic in plan.topics.all() :
+                plans.append(plan)
+
     except ObjectDoesNotExist:
         raise Http404("Topic does not exist")
-    return render(request, 'lessonPlans/topic_detail.html', {'topic' : topic})
+    return render(request, 'lessonPlans/topic_detail.html', {'topic' : topic, 'plans' : plans})
