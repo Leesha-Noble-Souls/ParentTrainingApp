@@ -3,10 +3,20 @@
 
 {% block content %}
 <div class = "container">
+    <br>
+    <br>
+    <br>
+
+    <br>
 <form action="/lessonPlans/form" method="post">
+
+    <div class="fontuser">
     {% csrf_token %}
     {{ form }}
+</div>
     <input type="submit" value="Submit">
+
+    </form>
 </form>
 </div>
 {% endblock %}
