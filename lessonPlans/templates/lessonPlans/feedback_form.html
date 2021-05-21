@@ -10,10 +10,12 @@
     <br>
 <form action="/lessonPlans/form" method="post">
 
-    <div class="fontuser">
+    
     {% csrf_token %}
-    {{ form }}
-</div>
+    <table border="1">
+        {{ form }}
+        </table>
+        
     <input type="submit" value="Submit">
 
     </form>
