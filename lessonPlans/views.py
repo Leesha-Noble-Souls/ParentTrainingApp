@@ -1,8 +1,42 @@
+
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 
-from .models import LessonPlan, Topic
+from .models import FeedBack, LessonPlan, Topic
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+
+from .forms import FeedBackForm
+
+def get_name(request):
+    
+    context ={}
+    if request.method == 'GET':
+        return HttpResponse("Yayy")
+    if request.method == 'POST':
+        form = FeedBackForm(request.POST)
+        if form.is_valid():
+            try:
+                f = False    
+                post = form.save(commit = False);
+                post.name = request.user.username + "_" + str(form.cleaned_data['lessons']);
+                for plan in LessonPlan.objects.all():
+                    if request.user in plan.assigned_users.all() and plan.title == str(form.cleaned_data['lessons']):
+                        context['form']= post
+                        post.save();
+                        f= True
+                if f != True:
+                    
+                    return render(request, 'lessonPlans/error_form.html');
+                    
+
+            except Exception as e:
+                return render(request, 'lessonPlans/error_form.html')
+        return render(request, 'lessonPlans/feedback_form.html', {'form': form})
+            #
+
 
 def index(request):
     return HttpResponse("Hello, world")
