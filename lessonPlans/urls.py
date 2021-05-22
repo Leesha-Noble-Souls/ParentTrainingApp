@@ -5,10 +5,8 @@ from . import views
 app_name = 'lessonPlans'
 urlpatterns = [
     path('', views.index, name='index'),
-      path('form', views.get_name, name = 'name'),
     path('<int:lessonPlan_id>/', views.detail, name='detail'),
     path('topics/<int:topic_id>', views.topic_detail, name='topic-detail'),
-  
 ]
 
 urlpatterns += staticfiles_urlpatterns()
