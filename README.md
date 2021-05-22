@@ -1,3 +1,7 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
 ## About The Project
 
@@ -22,14 +26,18 @@ Install Django on your computer.
    ```sh
    git clone https://github.com/avgupt/ParentTrainingApp.git
    ```
-3. Make migrations
+3. Change directory
+   ```sh
+   cd ParentTrainingApp
+   ```   
+4. Make migrations
    ```sh
    python manage.py makemigrations
    ```
    ```sh
    python manage.py migrate --run-syncdb
    ```
-4. Run the project
+5. Run the project
    ```sh
    python manage.py runserver
    ```
@@ -58,3 +66,12 @@ Avishi Gupta - [@avgupt](https://linkedin.com/in/avgupt/) - avishig012@gmail.com
 
 ## Acknowledgements
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+
+[contributors-shield]: https://img.shields.io/github/contributors/avgupt/ParentTrainingApp.svg?style=for-the-badge
+[contributors-url]: https://github.com/avgupt/ParentTrainingApp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/avgupt/ParentTrainingApp.svg?style=for-the-badge
+[forks-url]: https://github.com/avgupt/ParentTrainingApp/network/members
+[stars-shield]: https://img.shields.io/github/stars/avgupt/ParentTrainingApp.svg?style=for-the-badge
+[stars-url]: https://github.com/avgupt/ParentTrainingApp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/avgupt/ParentTrainingApp.svg?style=for-the-badge
+[issues-url]: https://github.com/avgupt/ParentTrainingApp/issues
