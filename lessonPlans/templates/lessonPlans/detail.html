@@ -9,6 +9,11 @@
                 <div class="col-lg-5">
                     <div class="text-container">
                         <h2>{{ lessonPlan.title }}</h2>
+                        <div>
+                            {% for topic in topics %}
+                                <span class="badge badge-info">{{topic}}</span>
+                            {% endfor %}
+                        </div>
                         <p><b>Aim: </b> {{ lessonPlan.aim }}</p>
                         <p><b>Objectives: </b> {{ lessonPlan.objectives }}</p>
                         <p> {{ lessonPlan.activity }} </p>
