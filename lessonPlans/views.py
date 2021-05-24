@@ -19,13 +19,13 @@ def detail(request, lessonPlan_id):
             YT = YT2
         else:
             YT = YT1
-        print(index)
+        # print(index)
         link = link[:index] + YT1 + "/embed" + link[index+len(YT):]
-        print(link)
+        # print(link)
     except:
         raise Http404("Lesson plan does not exist")
     if lessonPlan.public or (request.user in lessonPlan.assigned_users.all()):
-        return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'link' : link})
+        return render(request, 'lessonPlans/detail.html', {'lessonPlan' : lessonPlan, 'topics':lessonPlan.topics.all(), 'link' : link})
     return redirect('/accounts/login')
 
 def topic_detail(request, topic_id):
