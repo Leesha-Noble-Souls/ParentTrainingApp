@@ -8,6 +8,7 @@ class ParentCreationForm(UserCreationForm):
         model = Parent
         fields = ('username', 'email')
 
+
 class ParentChangeForm(UserChangeForm):
 
     class Meta:

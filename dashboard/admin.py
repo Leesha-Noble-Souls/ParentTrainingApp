@@ -8,6 +8,7 @@ class ParentAdmin(UserAdmin):
     add_form = ParentCreationForm
     form = ParentChangeForm
     model = Parent
-    list_display = ['email', 'username',]
+    list_display = ['email', 'username', ]
+
 
 admin.site.register(Parent, ParentAdmin)
