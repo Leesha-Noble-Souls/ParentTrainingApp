@@ -18,6 +18,13 @@
                 <a class="nav-link page-scroll" href="{% url 'home' %}">HOME</a>
             </li>
 
+            {% if user.is_authenticated %}  
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{% url 'dashboard:dashboard' %}">DASHBOARD</a>
+            </li>
+            {% endif %}
+
+
             <!-- Dropdown Menu -->          
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">INFO</a>
