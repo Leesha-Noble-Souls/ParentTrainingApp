@@ -20,7 +20,7 @@
 
             {% if user.is_authenticated %}  
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="/dashboard">DASHBOARD</a>
+                <a class="nav-link page-scroll" href="{% url 'dashboard:dashboard' %}">DASHBOARD</a>
             </li>
             {% endif %}
 
