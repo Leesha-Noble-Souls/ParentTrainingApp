@@ -13,6 +13,10 @@
     <!-- end of mobile menu toggle button -->
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <li class="nav-item">
+        <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">LEESHA NOBLE SOULS</a></b></p>
+
+        </li>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'home' %}">HOME</a>
@@ -26,21 +30,25 @@
 
 
             <!-- Dropdown Menu -->          
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">INFO</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">WHAT IS AUTISM?</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">MYTHS & MISCONCEPTIONS</span></a>
                 </div>
-            </li>
+            </li> -->
             <!-- end of dropdown menu -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#contact">ABOUT US</a>
+                <a class="nav-link page-scroll" href="{% url 'about' %}">ABOUT</a>
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{% url 'team' %}">TEAM</a>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">HOW IT WORKS</span></a>
@@ -49,19 +57,19 @@
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">LESSON PLANS</span></a>
                 </div>
-            </li>
+            </li> -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                <a class="nav-link page-scroll" href="{% url 'contact'%}">CONTACT</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'logout'%}">SIGN OUT</a>
             </li>
             {% else %}
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="#projects">REGISTER</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'login'%}">SIGN IN</a>
             </li>

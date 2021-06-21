@@ -1,16 +1,16 @@
 .main {
-    background-color: #FFFFFF;
+    background-color: #FAFAF8;
     width: 400px;
     height: 400px;
     margin: 11em auto;
     border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px #343a40;
+    box-shadow: 0px 11px 35px 2px #659dbd;
     /*rgba(0, 0, 0, 0.14)*/
 }
 
 .sign {
     padding-top: 40px;
-    color: #343a40;
+    color: #659dbd;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: 23px;
@@ -72,8 +72,8 @@ font-family: 'Ubuntu', sans-serif;
 .submit {
   cursor: pointer;
     border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #343a40, #696d70);
+    color: #FAFAF8;
+    background: linear-gradient(to right, #659dbd, #696d70);
     border: 0;
     padding-left: 40px;
     padding-right: 40px;

@@ -3,34 +3,52 @@
 
 {% block content %}
 
-<div id="intro" class="basic-1">
+<div id="intro" class="basic-1" style="background-color: #659dbd;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="text-container">
-                    <h2>We Assist Parents</h2>
-                    <p>Autism is a developmental disorder characterized by difficulties with social interaction and communication, and by restricted and repetitive behavior.</p>
+                    <h2 style="color: #fafaf8">We Assist Parents</h2>
+                    <p style="color: #fafaf8">
+                        Autism is a developmental disorder characterized by difficulties with social interaction and 
+                        communication, and by restricted and repetitive behavior.
+                    </p>
                     <div class="button-container">
-                        <a class="btn-solid-reg page-scroll"><span>GO TO LESSON PLANS</span></a>
+                        <a class="btn-solid-reg page-scroll" href="{% url 'about' %}"><span>ABOUT LEESHA</span></a>
                     </div>
                 </div> 
             </div>
             <div class="col-lg-7">
                 <div class="image-container">
-                    <img class="img-fluid" src="{% static 'images/autism.jpg' %}" alt="alternative">
+                    <img class="img-fluid" src="{% static 'images/home_photo.jpg' %}" alt="alternative">
                 </div>
             </div>
         </div> 
     </div> 
 </div> 
 
-<!-- Testimonials -->
-<div class="slider">
+<div class="slider about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Read Our Customer Testimonials</h2>
-                <p class="p-heading">Our clients are our partners and we can not imagine a better future for our company without helping them reach their objectives</p>
+                <h2>Our Mission</h2>
+                <hr>
+                <p class="p-heading" style="width: 100%">
+                    The children of Autism spectrum require help at many phases and any phase of their 
+                    life journey so this is the beginning and we are there for the entire life journey.
+                </p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div>
+</div>
+
+<!-- Testimonials -->
+<div class="slider" style="background-color: #bc986a;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 style="color: #fafaf8">Testimonials By Parents</h2>
+                <p class="p-heading"></p>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
@@ -40,14 +58,34 @@
                 <div class="slider-container">
                     <div class="swiper-container card-slider">
                         <div class="swiper-wrapper">
-                            
+
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-1.jpg' %}" alt="alternative">
+                                    <!-- <img class="card-image" src="{% static 'images/testimonial-2.jpg' %}" alt="alternative"> -->
                                     <div class="card-body">
-                                        <div class="testimonial-text">The guys from Aria helped with getting my business off the ground and turning into a profitable company.</div>
-                                        <div class="testimonial-author">Jude Thorn - Founder</div>
+                                        <div class="testimonial-text">There is lot of stuff but videos by LeeshaNobleSouls 
+                                            provide us knowledge  in a particular direction  and in well organized  manner - it is like 
+                                            a supportive treatment ...
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author">Apeksha</div>
+                                    </div>
+                                </div>        
+                            </div> <!-- end of swiper-slide -->
+                            <!-- end of slide -->
+
+                            <!-- Slide -->
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <!-- <img class="card-image" src="{% static 'images/testimonial-1.jpg' %}" alt="alternative"> -->
+                                    <div class="card-body">
+                                        <div class="testimonial-text">Having a child with special needs 
+                                            is a challenge in itself… This place has been a godsend. The activities help my child gets here 
+                                            is not only helpful to her, but as a parent ...
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author">Rupinder Kaur</div>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -56,10 +94,13 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-2.jpg' %}" alt="alternative">
+                                    <!-- <img class="card-image" src="{% static 'images/testimonial-3.jpg' %}" alt="alternative"> -->
                                     <div class="card-body">
-                                        <div class="testimonial-text">I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year. </div>
-                                        <div class="testimonial-author">Marsha Singer - Marketer</div>
+                                        <div class="testimonial-text"> As an anxious mom i have been very confused and worried for my daughter's 
+                                            future. Leesha nobel is one therapist where i found the answer ...
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author">Sana</div>
                                     </div>
                                 </div>        
                             </div> <!-- end of swiper-slide -->
@@ -68,48 +109,15 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-3.jpg' %}" alt="alternative">
+                                    <!-- <img class="card-image" src="{% static 'images/testimonial-4.jpg' %}" alt="alternative">s -->
                                     <div class="card-body">
-                                        <div class="testimonial-text">Aria's CEO personally attends client meetings and gives his feedback on business growth strategies.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
-                                    </div>
-                                </div>        
-                            </div> <!-- end of swiper-slide -->
-                            <!-- end of slide -->
-    
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-4.jpg' %}" alt="alternative">
-                                    <div class="card-body">
-                                        <div class="testimonial-text">At the beginning I thought the prices are a little high for what they offer but they over deliver each and every time.</div>
-                                        <div class="testimonial-author">Ronald Spice - Owner</div>
+                                        <div class="testimonial-text">Leesha group is one to one therapy group. We can easily reach with 
+                                            our problems and get answers. Their therapy is ...
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author">Shakha</div>
                                     </div>
                                 </div>
-                            </div> <!-- end of swiper-slide -->
-                            <!-- end of slide -->
-    
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-5.jpg' %}" alt="alternative">
-                                    <div class="card-body">
-                                        <div class="testimonial-text">I recommend Aria to every business owner or growth leader that wants to take his company to the next level.</div>
-                                        <div class="testimonial-author">Lindsay Rune - Manager</div>
-                                    </div>
-                                </div>        
-                            </div> <!-- end of swiper-slide -->
-                            <!-- end of slide -->
-    
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <img class="card-image" src="{% static 'images/testimonial-6.jpg' %}" alt="alternative">
-                                    <div class="card-body">
-                                        <div class="testimonial-text">My goals for using Aria's services seemed high when I first set them but they've met them with no problems.</div>
-                                        <div class="testimonial-author">Ann Black - Consultant</div>
-                                    </div>
-                                </div>        
                             </div> <!-- end of swiper-slide -->
                             <!-- end of slide -->
                         

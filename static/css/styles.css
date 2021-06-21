@@ -129,6 +129,7 @@ a.white,
 
 .testimonial-text {
 	font-style: italic;
+	color: #fafaf8
 }
 
 .testimonial-author {
@@ -147,10 +148,10 @@ strong {
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
-	border: 0.125rem solid #949494;
+	border: 0.125rem solid #bc986a;
 	border-radius: 0.25rem;
-	background-color: #949494;
-	color: #fff;
+	background-color: #bc986a;
+	color: #FAFAF8 !important;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -158,7 +159,7 @@ strong {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #949494;
+	color: #bc986a;
 	text-decoration: none;
 }
 
@@ -168,7 +169,7 @@ strong {
 	border: 0.125rem solid #949494;
 	border-radius: 0.25rem;
 	background-color: #949494;
-	color: #fff;
+	color: #FAFAF8;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -194,7 +195,7 @@ strong {
 
 .btn-outline-reg:hover {
 	background-color: #787976;
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 }
 
@@ -212,7 +213,7 @@ strong {
 
 .btn-outline-lg:hover {
 	background-color: #787976;
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 }
 
@@ -230,7 +231,7 @@ strong {
 
 .btn-outline-sm:hover {
 	background-color: #787976;
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 }
 
@@ -251,7 +252,7 @@ strong {
 	position: absolute;
 	top: 0.8125rem;
 	left: 1.375rem;
-	color: #787976;
+	color: #fafaf8;
 	opacity: 1;
 	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
 	cursor: text;
@@ -282,10 +283,10 @@ strong {
 	padding-top: 1.25rem;
 	padding-bottom: 0.25rem;
 	padding-left: 1.3125rem;
-	border: 1px solid #dadada;
+	border: 1px solid #fafaf8;
 	border-radius: 0.25rem;
-	background-color: #fff;
-	color: #787976;
+	background-color: #bc986a;
+	color: #fafaf8;
 	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
 	transition: all 0.2s;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
@@ -338,8 +339,8 @@ select::-ms-expand {
 	padding-left: 1.3125rem;
 	border: 1px solid #dadada;
 	border-radius: 0.25rem;
-	background-color: #fff;
-	color: #787976;
+	background-color: #bc986a;
+	color: #fafaf8;
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 	transition: all 0.2s;
 }
@@ -347,14 +348,8 @@ select::-ms-expand {
 .form-control-input:focus,
 .form-control-select:focus,
 .form-control-textarea:focus {
-	border: 1px solid #a1a1a1;
+	border: 1px solid #fafaf8;
 	outline: none; /* Removes blue border on focus */
-}
-
-.form-control-input:hover,
-.form-control-select:hover,
-.form-control-textarea:hover {
-	border: 1px solid #a1a1a1;
 }
 
 .checkbox {
@@ -377,10 +372,10 @@ input[type='checkbox'] {
 	display: inline-block;
 	width: 100%;
 	height: 3.125rem;
-	border: 0.125rem solid #949494;
+	border: 0.125rem solid #fafaf8;
 	border-radius: 0.25rem;
-	background-color: #949494;
-	color: #fff;
+	background-color: #fafaf8;
+	color: #bc986a;
 	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
 	cursor: pointer;
 	transition: all 0.2s;
@@ -388,7 +383,7 @@ input[type='checkbox'] {
 
 .form-control-submit-button:hover {
 	background-color: transparent;
-	color: #949494;
+	color: #fafaf8;
 }
 
 /* Form Success And Error Message Formatting */
@@ -405,7 +400,7 @@ input[type='checkbox'] {
 }
 
 .help-block.with-errors .list-unstyled {
-	color: #787976;
+	color: #fafaf8;
 	font-size: 0.75rem;
 	line-height: 1.125rem;
 	text-align: left;
@@ -605,7 +600,7 @@ input[type='checkbox'] {
 	width: 1rem;
 	height: 1rem;
 	border-radius: 100%;
-	background-color: #fff;
+	background-color: #FAFAF8;
 	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
@@ -664,7 +659,7 @@ input[type='checkbox'] {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
 	font: 700 2.25rem/1.5rem "Montserrat", sans-serif;
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 }
 
@@ -675,7 +670,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link {
 	padding: 0.625rem 0.75rem 0.625rem 0.75rem;
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -714,7 +709,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item {
-	color: #fff;
+	color: #FAFAF8;
 	text-decoration: none;
 }
 
@@ -746,7 +741,7 @@ input[type='checkbox'] {
 
 .navbar-custom .navbar-toggler {
 	border: none;
-	color: #fff;
+	color: #FAFAF8;
 	font-size: 2rem;
 }
 
@@ -788,7 +783,7 @@ input[type='checkbox'] {
 
 .header h1 {
 	margin-bottom: 0.5rem;
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .header .p-large {
@@ -879,7 +874,7 @@ input[type='checkbox'] {
 }
 
 .cards-1 .fa-stack-1x {
-	color: #fff;
+	color: #FAFAF8;
 	font-size: 2rem;
 }
 
@@ -927,7 +922,7 @@ input[type='checkbox'] {
 	border: 1px solid #ebe8e8;
 	border-bottom-left-radius: 0.375rem;
 	border-bottom-right-radius: 0.375rem;
-	background-color: #fff;
+	background-color: #FAFAF8;
 }
 
 .cards-2 h3 {
@@ -966,7 +961,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .btn-solid-reg:hover {
-	background-color: #fff;
+	background-color: #FAFAF8;
 }
 
 
@@ -1008,7 +1003,7 @@ input[type='checkbox'] {
 	border: 0.125rem solid #707070;
 	border-radius: 50%;
 	background-color: #707070;
-	color: #fff;
+	color: #FAFAF8;
 	font: 700 1rem/2.125rem "Montserrat", sans-serif;
 	text-align: center;
 	vertical-align: middle;
@@ -1239,6 +1234,10 @@ input[type='checkbox'] {
 	color: #484a46;
 }
 
+.about {
+	padding-top: 3.375rem;
+	padding-bottom: 0rem;
+}
 
 /**********************/
 /*     11. Call Me    */
@@ -1259,7 +1258,7 @@ input[type='checkbox'] {
 
 .form-1 h2 {
 	margin-bottom: 1.375rem;
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .form-1 .list-unstyled .fas {
@@ -1273,20 +1272,20 @@ input[type='checkbox'] {
 }
 
 .form-1 .label-control {
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .form-1 .form-control-input,
 .form-1 .form-control-select {
-	border: 1px solid #828282;
-	background-color: #3c3c3c;
-	color: #fff;
+	border: 1px solid #fafaf8;
+	background-color: #fafaf8;
+	color: #FAFAF8;
 }
 
 .form-1 .form-control-textarea {
-	border: 1px solid #7c7c7c;
-	background-color: #3c3c3c;
-	color: #fff;
+	border: 1px solid #fafaf8;
+	background-color: #fafaf8;
+	color: #FAFAF8;
 }
 
 .form-1 .form-control-input:focus,
@@ -1295,12 +1294,12 @@ input[type='checkbox'] {
 .form-1 .form-control-select:hover,
 .form-1 .form-control-textarea:focus,
 .form-1 .form-control-textarea:hover {
-	border: 1px solid #fff;
+	border: 1px solid #FAFAF8;
 }
 
 #lmsgSubmit.h3.text-center.tada.animated,
 #lmsgSubmit.h3.text-center {
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .form-1 .help-block.with-errors .list-unstyled {
@@ -1349,12 +1348,12 @@ input[type='checkbox'] {
 
 .filter .button-group a:hover {
 	background-color: #707070;
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .filter .button-group a.button.is-checked {
 	background-color: #707070;
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .filter .grid {
@@ -1403,7 +1402,7 @@ input[type='checkbox'] {
 	top: 42%;
 	right: 0;
 	left: 0;
-	color: #fff;
+	color: #FAFAF8;
 	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
 }
 
@@ -1417,7 +1416,7 @@ input[type='checkbox'] {
 	margin: 2.5rem auto;
 	padding: 1.5625rem;
 	border-radius: 0.25rem;
-	background: #fff;
+	background: #FAFAF8;
 	text-align: left;
 }
 
@@ -1561,7 +1560,7 @@ input[type='checkbox'] {
 .basic-2 .fa-stack-1x {
 	font-size: 0.6875rem;
 	line-height: 1.75rem;
-	color: #fff;
+	color: #FAFAF8;
 	transition: all 0.2s ease;
 }
 
@@ -1702,7 +1701,7 @@ input[type='checkbox'] {
 .form-2 .fa-stack-1x {
 	font-size: 1.5rem;
 	line-height: 3.25rem;
-	color: #fff;
+	color: #FAFAF8;
 	transition: all 0.2s ease;
 }
 
@@ -1725,7 +1724,7 @@ input[type='checkbox'] {
 
 .footer h4 {
 	margin-bottom: 0.75rem;
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .footer p,
@@ -1785,7 +1784,7 @@ a:hover.back-to-top {
 }
 
 .ex-header h1 {
-	color: #fff;
+	color: #FAFAF8;
 }
 
 .ex-basic-1 {
@@ -1862,7 +1861,7 @@ a:hover.back-to-top {
 	}
 	
 	.navbar-custom .navbar-brand.logo-text {
-		color: #fff;
+		color: #FAFAF8;
 	}
 
 	.navbar-custom .navbar-nav {
@@ -1886,11 +1885,11 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom.top-nav-collapse .navbar-brand.logo-text {
-		color: #fff;
+		color: #FAFAF8;
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
-		color: #fff;
+		color: #FAFAF8;
 	}
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
@@ -2062,7 +2061,7 @@ a:hover.back-to-top {
 	.navbar-custom .fa-stack-1x {
 		font-size: 0.6875rem;
 		line-height: 1.625rem;
-		color: #fff;
+		color: #FAFAF8;
 		transition: all 0.2s ease;
 	}
 
@@ -2086,7 +2085,7 @@ a:hover.back-to-top {
 
 	/* Intro */
 	.basic-1 {
-		padding-top: 6.875rem;
+		padding-top: 10.875rem;
 	}
 
 	.basic-1 .text-container {
