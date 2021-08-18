@@ -22,6 +22,14 @@
                 <a class="nav-link page-scroll" href="{% url 'home' %}">HOME</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{% url 'home' %}">ABOUT AUTISM</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{% url 'home' %}">WEBINARS</a>
+            </li>
+
             {% if user.is_authenticated %}  
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'dashboard:dashboard' %}">DASHBOARD</a>
@@ -30,22 +38,31 @@
 
 
             <!-- Dropdown Menu -->          
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">INFO</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TRAINING</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">WHAT IS AUTISM?</span></a>
+                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">AUTISM TRAINING FOR PARENTS</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">MYTHS & MISCONCEPTIONS</span></a>
+                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TRAINING FOR VOLUNTEERS</span></a>
                 </div>
-            </li> -->
+            </li>
             <!-- end of dropdown menu -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'about' %}">ABOUT</a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="{% url 'team' %}">TEAM</a>
+                <a class="nav-link page-scroll" href="{% url 'team' %}">ABOUT US</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">AREAS WE WORK</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">ADL</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">COMMUNICATION</span></a>
+                </div>
             </li>
 
             <!-- <li class="nav-item dropdown">

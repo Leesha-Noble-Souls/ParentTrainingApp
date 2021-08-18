@@ -5,21 +5,26 @@
 
 <div id="intro" class="basic-1">
     <div class="container">
-        <h2>Welcome To Your Dashboard!</h2>
+        <div class="text-container">
+            <h2>Welcome To Your Dashboard!</h2>
+        </div>
+        <hr>
+        <br>
         <!-- <p>You can access lesson plans either by topic or by the date in which they were assigned.</p> -->
     {% for topic, plans in topic_to_plans.items %}
-        <h3><a href = "{% url 'lessonPlans:topic-detail' topic.id %}">{{topic}}</a></h3>
+        <h2><a href = "{% url 'lessonPlans:topic-detail' topic.id %}">{{topic}}</a></h2>
         <div class="d-flex flex-row flex-wrap align-items-center">
         {% for plan in plans %}
             <div class="card card-mobile">
                 <div class="card-body">
                     <h4 class="card-title">{{ plan.title }}</h4>
-                    <p class="card-text d-none d-md-block">{{ plan.aim }}</p>
+                    <p class="card-text d-none d-md-block" style="color:#fafaf8">{{ plan.aim }}</p>
                     <a href="{% url 'lessonPlans:detail' plan.id %}" class="btn btn-secondary text-decoration-none">View More</a>     
                 </div>
             </div>
         {% endfor %}
-        </div>    
+        </div>
+        <hr>  
     {% endfor %}
     </div> 
 </div> 

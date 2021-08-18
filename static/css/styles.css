@@ -53,7 +53,6 @@ html {
 }
 
 body, p {
-	color: #787976; 
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 }
 
@@ -79,32 +78,32 @@ body, p {
 }
 
 h1 {
-	color: #484a46;
+	color: #1167b1;
 	font: 700 2.5rem/3rem "Montserrat", sans-serif;
 }
 
 h2 {
-	color: #484a46;
+	color: #1167b1;
 	font: 700 1.75rem/2.125rem "Montserrat", sans-serif;
 }
 
 h3 {
-	color: #484a46;
+	color: #1167b1;
 	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
 }
 
 h4 {
-	color: #484a46;
+	color: ##1167b1;
 	font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
 }
 
 h5 {
-	color: #484a46;
+	color: #1167b1;
 	font: 700 1.125rem/1.5rem "Montserrat", sans-serif;
 }
 
 h6 {
-	color: #484a46;
+	color: #1167b1;
 	font: 700 1rem/1.375rem "Montserrat", sans-serif;
 }
 
@@ -148,9 +147,9 @@ strong {
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
-	border: 0.125rem solid #bc986a;
+	border: 0.125rem solid #ff8000;
 	border-radius: 0.25rem;
-	background-color: #bc986a;
+	background-color: #ff8000;
 	color: #FAFAF8 !important;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
@@ -159,7 +158,7 @@ strong {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #bc986a;
+	color: #ff8000;
 	text-decoration: none;
 }
 
@@ -285,7 +284,7 @@ strong {
 	padding-left: 1.3125rem;
 	border: 1px solid #fafaf8;
 	border-radius: 0.25rem;
-	background-color: #bc986a;
+	background-color: #ff8000;
 	color: #fafaf8;
 	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
 	transition: all 0.2s;
@@ -339,7 +338,7 @@ select::-ms-expand {
 	padding-left: 1.3125rem;
 	border: 1px solid #dadada;
 	border-radius: 0.25rem;
-	background-color: #bc986a;
+	background-color: #ff8000;
 	color: #fafaf8;
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 	transition: all 0.2s;
@@ -375,7 +374,7 @@ input[type='checkbox'] {
 	border: 0.125rem solid #fafaf8;
 	border-radius: 0.25rem;
 	background-color: #fafaf8;
-	color: #bc986a;
+	color: #ff8000;
 	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
 	cursor: pointer;
 	transition: all 0.2s;
@@ -677,7 +676,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-	color: #707070;
+	color: #ff8000;
 }
 
 /* Dropdown Menu */
@@ -818,7 +817,7 @@ input[type='checkbox'] {
 }
 
 .basic-1 .testimonial-author {
-	color: #484a46;
+	color: #1167b1;
 }
 
 /* Hover Animation */
@@ -1078,7 +1077,7 @@ input[type='checkbox'] {
 
 .tabs .nav-link:hover,
 .tabs .nav-link.active {
-	color: #707070;
+	color: #ff8000;
 }
 
 .tabs .nav-link .fas {
@@ -1231,7 +1230,7 @@ input[type='checkbox'] {
 }
 
 .slider .testimonial-author {
-	color: #484a46;
+	color: #1167b1;
 }
 
 .about {
@@ -1875,7 +1874,7 @@ a:hover.back-to-top {
 	
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
-		color: #707070;
+		color: #ff8000;
 	}
 
 	.navbar-custom.top-nav-collapse {
@@ -1894,7 +1893,7 @@ a:hover.back-to-top {
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #707070;
+		color: #ff8000;
 	}
 
 	.navbar-custom .dropdown-menu {
