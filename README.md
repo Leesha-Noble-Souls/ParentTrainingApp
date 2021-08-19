@@ -24,7 +24,7 @@ Install Django on your computer.
 1. Install Django from [docs.djangoproject.com](https://docs.djangoproject.com/en/3.2/intro/install/)
 2. Clone the repo
    ```sh
-   git clone https://github.com/avgupt/ParentTrainingApp.git
+   git clone https://github.com/Leesha-Noble-Souls/ParentTrainingApp.git
    ```
 3. Change directory
    ```sh
