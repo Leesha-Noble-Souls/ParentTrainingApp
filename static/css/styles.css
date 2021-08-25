@@ -112,6 +112,14 @@ a {
 	text-decoration: underline;
 }
 
+a.list:link, a.list:visited, a.list:focus {
+	color: #1167b1;
+  }
+  
+  a.list:hover {
+	color: orange;
+  }
+
 a:hover {
 	color: #787976;
 	text-decoration: underline;
@@ -806,6 +814,10 @@ input[type='checkbox'] {
 
 .basic-1 .text-container {
 	margin-bottom: 3rem;
+}
+
+.basic-1 .text-container .list {
+	color: blue;
 }
 
 .basic-1 .section-title {

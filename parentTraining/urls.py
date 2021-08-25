@@ -30,7 +30,9 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('lessonPlans/', include('lessonPlans.urls')),
     path('admin/', admin.site.urls),
-    path('dashboard/', include('dashboard.urls'))
+    path('dashboard/', include('dashboard.urls')),
+    path('autism/', views.autism,name='autism'),
+    path('webinar/', views.webinar,name='webinar')
 ]
 
 if settings.DEBUG:

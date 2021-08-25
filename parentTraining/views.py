@@ -15,3 +15,9 @@ def testimonials(request):
 
 def contact(request):
     return render(request, 'parentTraining/contact.html')
+
+def autism(request):
+    return render(request, 'parentTraining/about-autism.html')
+
+def webinar(request):
+    return render(request, 'parentTraining/webinar.html')

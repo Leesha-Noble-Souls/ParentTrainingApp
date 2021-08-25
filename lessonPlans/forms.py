@@ -23,11 +23,11 @@ FREQUENCY_CHOICES=[
 
 class LessonFeedbackForm(forms.ModelForm):
     status = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=STATUS_CHOICES)
-    frequency = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=FREQUENCY_CHOICES)
+    frequency = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=FREQUENCY_CHOICES, label='Regularity')
     prompts= forms.MultipleChoiceField(required=True,choices=PROMPTS_CHOICES,widget=CheckboxSelectMultiple)
 
     class Meta:
         model = LessonFeedback
         fields = ['status', 'prompts', 'frequency', 'feedback']
-        labels={'status':'Status', 'prompts':'Prompts','frequency':'Regularity','feedback':'Any Other Feedback'}
+        labels={'feedback':'Any Other Feedback'}
         widgets={}
