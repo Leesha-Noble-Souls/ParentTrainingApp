@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from lessonPlans.models import Topic
 
 def home(request):
     return render(request, 'parentTraining/home.html')
@@ -21,3 +21,8 @@ def autism(request):
 
 def webinar(request):
     return render(request, 'parentTraining/webinar.html')
+
+
+
+def work_areas(request):
+    return render(request, "parentTraining/work_areas.html", {"topics" : Topic.objects.all()})

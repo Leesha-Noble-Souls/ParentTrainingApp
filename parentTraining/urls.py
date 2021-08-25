@@ -32,7 +32,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('dashboard/', include('dashboard.urls')),
     path('autism/', views.autism,name='autism'),
-    path('webinar/', views.webinar,name='webinar')
+    path('webinar/', views.webinar,name='webinar'),
+    path('work_areas/', views.work_areas,name='work_areas')
 ]
 
 if settings.DEBUG:
