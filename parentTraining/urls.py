@@ -33,7 +33,10 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('autism/', views.autism,name='autism'),
     path('webinar/', views.webinar,name='webinar'),
-    path('work_areas/', views.work_areas,name='work_areas')
+    path('work_areas/', views.work_areas,name='work_areas'),
+    path('assessment/', views.assessment,name='assessment'),
+    path('onlineTraining/', views.onlineTraining,name='onlineTraining'),
+    path('shortCourse/', views.shortCourse,name='shortCourse')
 ]
 
 if settings.DEBUG:

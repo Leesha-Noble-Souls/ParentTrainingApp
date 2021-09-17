@@ -22,7 +22,14 @@ def autism(request):
 def webinar(request):
     return render(request, 'parentTraining/webinar.html')
 
+def assessment(request):
+    return render(request, 'parentTraining/assessment.html')
 
+def onlineTraining(request):
+    return render(request, 'parentTraining/onlineTraining.html')
+
+def shortCourse(request):
+    return render(request, 'parentTraining/shortCourse.html')
 
 def work_areas(request):
     return render(request, "parentTraining/work_areas.html", {"topics" : Topic.objects.all()})

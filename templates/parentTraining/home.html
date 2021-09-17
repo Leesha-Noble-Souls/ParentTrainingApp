@@ -2,8 +2,31 @@
 {% load static %}
 
 {% block content %}
-
-<div id="intro" class="basic-1" style="background-color: #1167b1;">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,h1,h5 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+      background-image: url("../../static/images/home_photo.jpg");
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+</style>
+<div class="bgimg w3-display-container">
+    <div class="w3-display-middle w3-jumbo">
+      
+        <h1 style="color: #ff8000" class="w3-jumbo w3-animate-top"><b>We Assist Parents</b></h1>
+        <hr class="w3-border-orange" style="margin:auto;width:40%">
+        <!-- <h6 class="w3-center"  style="color: #1167b1"><b>Autism is a developmental disorder characterized by difficulties with social interaction and 
+            communication, and by restricted and repetitive behavior.</b></h6> -->
+      <h1 class="w3-center" ><a class="btn-solid-reg page-scroll w3-large w3-center" style="background-color: #1167b1" href="{% url 'about' %}">ABOUT LEESHA</a></h1>
+        
+     
+    </div>
+  </div>
+<!-- <div id="intro" class="basic-1" style="background-color: #1167b1;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
@@ -25,13 +48,13 @@
             </div>
         </div> 
     </div> 
-</div> 
+</div>  -->
 
 <div class="slider about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Our Mission</h2>
+                <h2><b>Our Mission</b></h2>
                 <hr>
                 <p class="p-heading" style="width: 100%">
                     The children of Autism spectrum require help at many phases and any phase of their 
@@ -47,7 +70,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 style="color: #1167b1">Testimonials By Parents</h2>
+                <h2 style="color: #1167b1"><b>Testimonials By Parents</b></h2>
+                <hr>
                 <p class="p-heading"></p>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
