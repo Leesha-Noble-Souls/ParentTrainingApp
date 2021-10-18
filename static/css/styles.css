@@ -683,7 +683,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
+.navbar-custom .nav-item .nav-link:active {
 	color: #ff8000;
 }
 
@@ -1885,7 +1885,7 @@ a:hover.back-to-top {
 	}
 	
 	.navbar-custom .nav-item .nav-link:hover,
-	.navbar-custom .nav-item .nav-link.active {
+	.navbar-custom .nav-item .nav-link:active {
 		color: #ff8000;
 	}
 
@@ -1899,12 +1899,13 @@ a:hover.back-to-top {
 		color: #FAFAF8;
 	}
 
+
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
 		color: #FAFAF8;
 	}
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
-	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
+	.navbar-custom.top-nav-collapse .nav-item .nav-link:active {
 		color: #ff8000;
 	}
 
@@ -2456,4 +2457,4 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 
-#accordion {text-align: left};
+#accordion {text-align: left}

@@ -3,6 +3,7 @@
 
 {% block navbar %}
 
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom fixed-top">
         
     <!-- Mobile Menu Toggle Button -->
@@ -18,7 +19,7 @@
         <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">LEESHA NOBLE SOULS</a></b></p>
         </div>
         
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto nav-pills">
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'home' %}">HOME</a>
             </li>
@@ -79,7 +80,7 @@
                 <a class="nav-link page-scroll" href="{% url 'assessment'%}">ASSESSMENT OF CHILD</a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item" >
                 <a class="nav-link page-scroll" href="{% url 'contact'%}">CONTACT</a>
             </li>
             {% if user.is_authenticated %}
@@ -97,5 +98,6 @@
         </ul>
     </div>
 </nav>
+
 
 {% endblock %}
