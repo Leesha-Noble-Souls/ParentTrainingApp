@@ -5,7 +5,9 @@
 
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom fixed-top">
-        
+
+    <!-- Image Logo -->
+        <a  href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="alternative" height="70rem"></a>
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -16,9 +18,9 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
         <div class="nav-item">
-        <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">LEESHA NOBLE SOULS</a></b></p>
+        <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">Vyom Autism Self-help Foundation</a></b></p>
         </div>
-        
+
         <ul class="navbar-nav ml-auto nav-pills">
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'home' %}">HOME</a>
@@ -32,14 +34,14 @@
                 <a class="nav-link page-scroll" href="{% url 'webinar' %}">WEBINARS</a>
             </li>
 
-            {% if user.is_authenticated %}  
+            {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{% url 'dashboard:dashboard' %}">DASHBOARD</a>
             </li>
             {% endif %}
 
 
-            <!-- Dropdown Menu -->          
+            <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TRAINING</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -63,7 +65,7 @@
             </li>
 
 
-          
+
 
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES</a>
