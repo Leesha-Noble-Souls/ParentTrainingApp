@@ -4,6 +4,7 @@
 {% block content %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 <style>
     body,h1,h5 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
@@ -13,13 +14,53 @@
       background-position: center;
       background-size: cover;
     }
+    .btn-solid-lg {
+	display: inline-block;
+	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
+	border: 0.125rem solid #ff8000;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	color: #FAFAF8;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+    .img-fluid-100 {
+      max-width: 100%;
+      height: auto;
+        text-align:center;
+        width:80%;
+        display:block;
+        margin:auto;
+    }
+
+.btn-solid-lg:hover {
+	background-color: #949494;
+	color: white;
+	text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #1167b1 !important;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
 </style>
 
-<div class="w3-content w3-section" style="max-width:500px">
-  <img class="mySlides" src="home-image1.jpeg" style="width:100%">
-  <img class="mySlides" src="home-image2.jpeg" style="width:100%">
-  <img class="mySlides" src="home-image3.jpeg" style="width:100%">
-</div>
+{#<div class="w3-content w3-section" style="max-width:500px">#}
+{#  <img class="mySlides" src="home-image1.jpeg" style="width:100%">#}
+{#  <img class="mySlides" src="home-image2.jpeg" style="width:100%">#}
+{#  <img class="mySlides" src="home-image3.jpeg" style="width:100%">#}
+{#</div>#}
 {#<div class="bgimg w3-display-container">#}
 {#    <div class="w3-display-middle w3-jumbo">#}
 {##}
@@ -38,14 +79,15 @@
             <div class="col-lg-4">
                 <div class="text-container">
 
-                    <h2 style="color: #ff8000"><b>We Assist Parents</b></h2>
-                    <hr class="w3-border-orange">
-                    <p style="color: #fafaf8">
+{#                    <h2 style="color: #ff8000"><b>We Assist Parents</b></h2>#}
+                    <h2 style="color:white; padding: 5px; background: #ff8000;text-align: center;"><b>We Assist Parents</b></h2>
+{#                    <hr class="w3-border-orange">#}
+                    <p style="color: #fafaf8"><b>
                         Autism is a developmental disorder characterized by difficulties with social interaction and
                         communication, and by restricted and repetitive behavior.
-                    </p>
+                    </b> </p>
 
-                    <h1><a class="btn-solid-reg page-scroll w3-large" style="background-color: #1167b1" href="{% url 'about' %}">ABOUT LEESHA</a></h1>
+                    <h1 class="w3-center"><a class="btn-solid-lg page-scroll w3-large"  href="{% url 'about' %}">ABOUT VYOM</a></h1>
 {#                    <div class="button-container">#}
 {#                        <a class="btn-solid-reg page-scroll" href="{% url 'about' %}"><span>ABOUT LEESHA</span></a>#}
 {#                    </div>#}
@@ -63,16 +105,22 @@
 
 <div class="slider about">
     <div class="container">
-        <div class="row">
+        <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;">Our Mission</h2>
+        <div class="row align-items-center">
             <div class="col-lg-12">
-                <h2><b>Our Mission</b></h2>
+{#                <h2><b>Our Mission</b></h2>#}
                 <hr>
-                <p class="p-heading" style="width: 100%">
+                <h4 class="p-heading" style="width: 100%"><b>
                     The children of Autism spectrum require help at many phases and any phase of their 
                     life journey so this is the beginning and we are there for the entire life journey.
-                </p>
+                </b></h4>
+                <div class="image-container">
+                    <img class="img-fluid-100 " src="{% static 'images/mission.jpeg' %}" alt="alternative" width="50%">
+                </div>
+
             </div> <!-- end of col -->
         </div> <!-- end of row -->
+
     </div>
 </div>
 
@@ -81,7 +129,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 style="color: #1167b1"><b>Testimonials By Parents</b></h2>
+                <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;">Testimonials By Parents</h2>
+{#                <h2 style="color: #1167b1"><b>Testimonials By Parents</b></h2>#}
                 <hr>
                 <p class="p-heading"></p>
             </div> <!-- end of col -->
@@ -97,7 +146,8 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <!-- <img class="card-image" src="{% static 'images/testimonial-2.jpg' %}" alt="alternative"> -->
+
+                                    <img class="card-image" src="{% static 'images/apeksha.jpeg' %}" alt="alternative">
                                     <div class="card-body">
                                         <div class="testimonial-text">There is lot of stuff but videos by LeeshaNobleSouls 
                                             provide us knowledge  in a particular direction  and in well organized  manner - it is like 
@@ -113,7 +163,7 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <!-- <img class="card-image" src="{% static 'images/testimonial-1.jpg' %}" alt="alternative"> -->
+                                   <img class="card-image" src="{% static 'images/rupinder.jpeg' %}" alt="alternative">
                                     <div class="card-body">
                                         <div class="testimonial-text">Having a child with special needs 
                                             is a challenge in itself… This place has been a godsend. The activities help my child gets here 
@@ -129,7 +179,7 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <!-- <img class="card-image" src="{% static 'images/testimonial-3.jpg' %}" alt="alternative"> -->
+                                    <img class="card-image" src="{% static 'images/sana.jpeg' %}" alt="alternative">
                                     <div class="card-body">
                                         <div class="testimonial-text"> As an anxious mom i have been very confused and worried for my daughter's 
                                             future. Leesha nobel is one therapist where i found the answer ...
@@ -144,7 +194,7 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <!-- <img class="card-image" src="{% static 'images/testimonial-4.jpg' %}" alt="alternative">s -->
+                                    <img class="card-image" src="{% static 'images/shakha.jpeg' %}" alt="alternative">
                                     <div class="card-body">
                                         <div class="testimonial-text">Leesha group is one to one therapy group. We can easily reach with 
                                             our problems and get answers. Their therapy is ...
