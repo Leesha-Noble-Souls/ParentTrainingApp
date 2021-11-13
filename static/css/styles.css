@@ -106,7 +106,19 @@ h6 {
 	color: #1167b1;
 	font: 700 1rem/1.375rem "Montserrat", sans-serif;
 }
-
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #1167b1 !important;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
 a {
 	color: #787976;
 	text-decoration: underline;
@@ -979,83 +991,83 @@ input[type='checkbox'] {
 /*************************/
 /*     08. Details 1     */
 /*************************/
-.accordion .area-1 {
-	height: 27rem;
-	background: url('../images/details-1-background.jpg') center center no-repeat;
-	background-size: cover;
-}
+/*.accordion .area-1 {*/
+/*	height: 27rem;*/
+/*	background: url('../images/details-1-background.jpg') center center no-repeat;*/
+/*	background-size: cover;*/
+/*}*/
 
-.accordion .accordion-container {
-	max-width: 90%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 6.375rem;
-	padding-bottom: 1.5rem;
-}
+/*.accordion .accordion-container {*/
+/*	max-width: 90%;*/
+/*	margin-right: auto;*/
+/*	margin-left: auto;*/
+/*	padding-top: 6.375rem;*/
+/*	padding-bottom: 1.5rem;*/
+/*}*/
 
-.accordion h2 {
-	margin-bottom: 1.625rem;
-}
+/*.accordion h2 {*/
+/*	margin-bottom: 1.625rem;*/
+/*}*/
 
-.accordion .item {
-	margin-bottom: 2rem;
-}
+/*.accordion .item {*/
+/*	margin-bottom: 2rem;*/
+/*}*/
 
-.accordion h4 {
-	margin-bottom: 0;
-}
+/*.accordion h4 {*/
+/*	margin-bottom: 0;*/
+/*}*/
 
-.accordion span[aria-expanded="true"] .circle-numbering,
-.accordion span[aria-expanded="false"] .circle-numbering {
-	display: inline-block;
-	width: 2.25rem;
-	height: 2.25rem;
-	margin-right: 0.875rem;
-	border: 0.125rem solid #707070;
-	border-radius: 50%;
-	background-color: #707070;
-	color: #FAFAF8;
-	font: 700 1rem/2.125rem "Montserrat", sans-serif;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
+/*.accordion span[aria-expanded="true"] .circle-numbering,*/
+/*.accordion span[aria-expanded="false"] .circle-numbering {*/
+/*	display: inline-block;*/
+/*	width: 2.25rem;*/
+/*	height: 2.25rem;*/
+/*	margin-right: 0.875rem;*/
+/*	border: 0.125rem solid #707070;*/
+/*	border-radius: 50%;*/
+/*	background-color: #707070;*/
+/*	color: #FAFAF8;*/
+/*	font: 700 1rem/2.125rem "Montserrat", sans-serif;*/
+/*	text-align: center;*/
+/*	vertical-align: middle;*/
+/*	cursor: pointer;*/
+/*	transition: all 0.2s ease;*/
+/*}*/
 
-.accordion span[aria-expanded="false"] .circle-numbering {
-	border: 0.125rem solid #484a46;
-	background-color: transparent;
-	color: #484a46;
-}
+/*.accordion span[aria-expanded="false"] .circle-numbering {*/
+/*	border: 0.125rem solid #484a46;*/
+/*	background-color: transparent;*/
+/*	color: #484a46;*/
+/*}*/
 
-.accordion .item:hover span[aria-expanded="false"] .circle-numbering {
-	border: 0.125rem solid #707070;
-	color: #707070;
-}
+/*.accordion .item:hover span[aria-expanded="false"] .circle-numbering {*/
+/*	border: 0.125rem solid #707070;*/
+/*	color: #707070;*/
+/*}*/
 
-.accordion .accordion-title {
-	display: inline-block;
-	width: 70%;
-	margin-top: 0.125rem;
-	margin-bottom: 0.25rem;
-	color: #484a46;
-	font: 700 1.25rem/1.75rem "Montserrat", sans-serif;
-	vertical-align: middle;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
+/*.accordion .accordion-title {*/
+/*	display: inline-block;*/
+/*	width: 70%;*/
+/*	margin-top: 0.125rem;*/
+/*	margin-bottom: 0.25rem;*/
+/*	color: #484a46;*/
+/*	font: 700 1.25rem/1.75rem "Montserrat", sans-serif;*/
+/*	vertical-align: middle;*/
+/*	cursor: pointer;*/
+/*	transition: all 0.2s ease;*/
+/*}*/
 
-.accordion .item:hover .accordion-title {
-	color: #707070;
-}
+/*.accordion .item:hover .accordion-title {*/
+/*	color: #707070;*/
+/*}*/
 
-.accordion span[aria-expanded="true"] .accordion-title {
-	color: #707070;
-}
+/*.accordion span[aria-expanded="true"] .accordion-title {*/
+/*	color: #707070;*/
+/*}*/
 
-.accordion .accordion-body {
-	margin-left: 3.125rem;
-}
+/*.accordion .accordion-body {*/
+/*	margin-left: 3.125rem;*/
+/*}*/
 
 
 /*************************/
@@ -2458,3 +2470,6 @@ a:hover.back-to-top {
 /* end of min-width width 1200px */
 
 #accordion {text-align: left}
+
+
+
