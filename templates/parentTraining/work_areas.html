@@ -2,16 +2,171 @@
 {% load static %}
 
 {% block content %}
+<style>
+@import url("https://fonts.googleapis.com/css?family=Karla|Space+Mono");
+
+:root {
+  --contentHeight: 30vh;
+  --sectionWidth: 700px;
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+{#body {#}
+{#  background-color: #000;#}
+{#}#}
+
+section {
+  max-width: var(--sectionWidth);
+  margin: 40px auto;
+  width: 97%;
+  color: #1167b1;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+  transition: .3s;
+  border-bottom: 2px solid;
+  user-select: none;
+}
+
+details > div {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 100%;
+  user-select: none;
+  padding: 0 20px;
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+}
+
+details > div > img {
+  align-self: flex-start;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+details > div > p {
+  flex: 1;
+}
+
+details[open] > summary {
+   color: #ff8000;
+}
+
+@media (min-width: 768px) {
+  details[open] > div > p {
+    opacity: 0;
+    animation-name: showContent;
+    animation-duration: 0.6s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  details[open] > div {
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  details[open] > div > img {
+    opacity: 0;
+    height: 100%;
+    margin: 0;
+    animation-name: showImage;
+    animation-duration: 0.3s;
+    animation-delay: 0.15s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
+  }
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0;
+    clip-path: inset(50% 0 50% 0);
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+</style>
 
 <div id="intro" class="basic-1">
     <div class="container">
+        <h1 style="color:white; padding: 10px; background: #ff8000;text-align: center;">Major Areas At A Glance</h1>
+
         <div class="text-container">
-            <h2>Major Areas at a glance</h2>
-            <hr>
-            <ol type="I">
-                <h3>
-                    <li>ADL</li>
-                    <ul type="square">
+
+{#            <section>#}
+{#  <details open>#}
+{#    <summary>Carl Gustav Jung</summary>#}
+{#    <div>#}
+{#      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_jung.jpg" />#}
+{#      <p>The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>#}
+{#    </div>#}
+{#  </details>#}
+{#  <details>#}
+{#    <summary>Sigmund Freud</summary>#}
+{#    <div>#}
+{#      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_freud.jpg" />#}
+{#      <p>The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>#}
+{#    </div>#}
+{#  </details>#}
+{#  <details>#}
+{#    <summary>Alfred Adler</summary>#}
+{#    <div>#}
+{#      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_alfred.jpg" />#}
+{#      <p>Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual#}
+{#        and a person's relationships with society.</p>#}
+{#    </div>#}
+{#  </details>#}
+{#</section>#}
+
+{#            <h2>Major Areas at a glance</h2>#}
+{#            <hr>#}
+
+            <section>
+  <details open>
+    <summary>1. ADL</summary>
+    <div>
+      <ul type="square">
                         <li> Toilet Training</li>
                         <li> Brushing</li>
                         <li> Bathing</li>
@@ -24,11 +179,14 @@
                         <li> Serving</li>
                         <li> Cooking</li>
                         <li> Cutting Skills</li>
-                    </ul>
-                    <br>
-                    <li>Receptive Communication</li>
-                    <br>
-                    <ul type="None">
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Receptive Communication</summary>
+    <div>
+         <ul type="None">
                         <li>Basic Communication</li>
                         <ul type="square">
                             <li> Recognition of Family Members</li>
@@ -48,11 +206,14 @@
                             <li> Understanding of Movie</li>
                             <li> Comprehension</li>
                         </ul>
-                    </ul>
-                    <br>
-                    <li>Expressive Communication</li>
-                    <br>
-                    <ul type="None">
+         </ul>
+    </div>
+  </details>
+
+    <details>
+    <summary>3. Expressive Communication</summary>
+    <div>
+        <ul type="None">
                         <li>Verbal and Non Verbal</li>
                         <ul type="square">
                             <li> Pointing</li>
@@ -74,8 +235,13 @@
                         </ul>
                         <br>
                     </ul>
-                    <li> Socialization</li>
-                    <ul type="square">
+    </div>
+  </details>
+
+   <details>
+    <summary>4. Socialization</summary>
+    <div>
+         <ul type="square">
                         <li> Interaction with Peer Group</li>
                         <li> Interaction with Non-Peer Group</li>
                         <li> Interaction with Siblings</li>
@@ -84,12 +250,15 @@
                         <li> Involvement with guest at Home</li>
                         <li> Interaction with Parents/Educators/ Friends</li>
                     </ul>
-                    <br>
-                    <li> Behaviour Issues</li>
-                    <br>
-                    <ul type="None">
+    </div>
+  </details>
+
+ <details>
+    <summary>5. Behaviour Issues</summary>
+    <div>
+             <ul type="None">
                         <li> Challenging Behaviour</li>
-                    
+
                         <ul type="square">
                             <li> Hitting others</li>
                             <li> Biting others</li>
@@ -117,8 +286,13 @@
                         </ul>
                         <br>
                     </ul>
-                    <li> Academics</li>
-                    <ul type="square">
+    </div>
+  </details>
+
+<details>
+    <summary>6. Academics</summary>
+    <div>
+        <ul type="square">
                         <li> Introduction of Fruits / Vegetables</li>
                         <li> Introduction of means of Transport</li>
                         <li> Introduction of kitchen, bathroom and drawing room articles</li>
@@ -137,17 +311,45 @@
                         <li> Word Formation</li>
                         <li> Pre-Writing skills</li>
                     </ul>
-                    <br>
-                    <li> Sensory Issues</li><br>
-                    <li> Introducing Games to Kids</li><br>
-                    <li> Picture Schedule (PECS)</li><br>
-                    <li> Flash card Making</li><br>
-                    <li> Story Creation</li><br>
-                    <li> Eye Gaze, Joint Attention and Sustained Attention</li><br>
-                    <li> Leisure Time Management</li><br>
-                    <li> Brain and Visual Skills Improvement</li><br>
-                    <li> Reasoning Skills</li>
-                    <ul type="square">
+    </div>
+  </details>
+
+    <details>
+    <summary>7. Sensory Issues</summary>
+
+  </details>
+
+   <details>
+    <summary>8. Introducing Games to Kids</summary>
+  </details>
+
+   <details>
+    <summary>9.  Picture Schedule (PECS)</summary>
+  </details>
+
+   <details>
+    <summary>10. Flash card Making</summary>
+  </details>
+
+     <details>
+    <summary>11. Story Creation</summary>
+  </details>
+
+     <details>
+    <summary>12. Eye Gaze, Joint Attention and Sustained Attention</summary>
+  </details>
+
+<details>
+    <summary>13. Leisure Time Management</summary>
+  </details>
+
+<details>
+    <summary>14. Brain and Visual Skills Improvement </summary>
+  </details>
+     <details>
+    <summary>15. Reasoning Skills</summary>
+    <div>
+        <ul type="square">
                         <li> Matching</li>
                         <li> Sorting</li>
                         <li> Puzzle Solving</li>
@@ -156,15 +358,23 @@
                         <li> Go creative with blocks</li>
                         <li> Inspire thinking</li>
                     </ul>
-                    <br>
-                    <li> Logical Skills</li>
-                    <ul type="square">
+    </div>
+  </details>
+
+   <details>
+       <summary>16. Logical Skills</summary>
+       <div>
+         <ul type="square">
                         <li> Patterns</li>
                         <li> Sequencing</li>
                     </ul>
-                    <br>
-                    <li> Recreational Activities</li>
-                    <ul type="square">
+       </div>
+   </details>
+
+    <details>
+       <summary>17. Recreational Activities</summary>
+        <div>
+              <ul type="square">
                         <li> Art and Craft</li>
                         <li> Dance</li>
                         <li> Singing</li>
@@ -177,14 +387,23 @@
                         <li> Greeting Making</li>
                         <li> Going to party / Restaurant/ Mall</li>
                     </ul>
-                    <br>
-                    <li> Prompt and Reinforcement</li><br>
-                    <li> Theory of Deficit mind</li><br>
-                    <li> Teaching Emotions</li><br>
+        </div>
+   </details>
 
-                </h3>
-            </ol>
-                
+    <details>
+       <summary>18. Prompt and Reinforcement</summary>
+   </details>
+
+     <details>
+       <summary>19. Theory of Deficit mind</summary>
+   </details>
+
+     <details>
+       <summary>20. Teaching Emotions</summary>
+   </details>
+
+</section>
+
         </div>
     </div> 
 </div> 
