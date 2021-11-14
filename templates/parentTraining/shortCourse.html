@@ -3,17 +3,44 @@
 
 {% block content %}
 
-<div id="intro" class="basic-1">
-    <div class="container">
-        <div class="text-container">
-            <h2>PAGE UNDER CONSTRUCTION</h2>
-        </div> 
-        <hr>
-    </div>
-    </div> 
-</div> 
+<style>
+ h2,p,h3,h6,h1{
+     font-family: "Times New Roman", Times, serif
+ }
+</style>
+
+<!-- Services -->
+    <div id="services" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <br><br><br>
+                    <h1 style="color:white; padding: 10px; background: #ff8000;text-align: center;">SHORT COURSES</h1>
+                    <br><br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for course in shortCourses %}
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>{{ course.title }}</h3>
+                            <p>{{ course.details}}</p>
+                            <p class="price">{{ course.highlight}}</p>
+                        </div>
+                        <div class="button-container">
+                            <a class="btn-solid-reg page-scroll" href={{ course.register_link }}>REGISTER HERE</a>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    {% endfor %}
+
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of services -->
 
 {% endblock %}
-
-
-

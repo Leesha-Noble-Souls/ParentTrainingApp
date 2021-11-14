@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from lessonPlans.models import Topic
+from lessonPlans.models import Topic,Webinar,ShortCourses,OnlineTraining
 
 def home(request):
     return render(request, 'parentTraining/home.html')
@@ -20,16 +20,16 @@ def autism(request):
     return render(request, 'parentTraining/about-autism.html')
 
 def webinar(request):
-    return render(request, 'parentTraining/webinar.html')
+    return render(request, 'parentTraining/webinar.html',{"webinars" : Webinar.objects.all()})
 
 def assessment(request):
     return render(request, 'parentTraining/assessment.html')
 
 def onlineTraining(request):
-    return render(request, 'parentTraining/onlineTraining.html')
+    return render(request, 'parentTraining/onlineTraining.html',{"onlineTrainings" : OnlineTraining.objects.all()})
 
 def shortCourse(request):
-    return render(request, 'parentTraining/shortCourse.html')
+    return render(request, 'parentTraining/shortCourse.html',{"shortCourses" : ShortCourses.objects.all()})
 
 def work_areas(request):
     return render(request, "parentTraining/work_areas.html", {"topics" : Topic.objects.all()})

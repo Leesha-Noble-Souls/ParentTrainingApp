@@ -53,7 +53,9 @@ html {
 }
 
 body, p {
-	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+	/*font: 400 1rem/1.5625rem "Open Sans", sans-serif;*/
+	font-family: "Times New Roman", Times, serif;
+
 }
 
 .p-large {
@@ -80,6 +82,8 @@ body, p {
 h1 {
 	color: #1167b1;
 	font: 700 2.5rem/3rem "Montserrat", sans-serif;
+	/*font-family: "Times New Roman", Times, serif;*/
+
 }
 
 h2 {

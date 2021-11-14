@@ -1,7 +1,10 @@
 from django.contrib import admin
 
-from .models import LessonPlan, Topic, LessonFeedback
+from .models import LessonPlan, Topic, LessonFeedback,OnlineTraining,ShortCourses,Webinar
 
 admin.site.register(Topic)
 admin.site.register(LessonPlan)
 admin.site.register(LessonFeedback)
+admin.site.register(Webinar)
+admin.site.register(OnlineTraining)
+admin.site.register(ShortCourses)
