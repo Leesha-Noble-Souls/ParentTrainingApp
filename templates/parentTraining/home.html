@@ -8,8 +8,9 @@
 <style>
     body,h1,h5 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
+    p{font-family: "Times New Roman", Times, serif}
     .bgimg {
-      background-image: url("../../static/images/home-1.jpg");
+      background-image: url("../../static/images/home-1f.jpg");
       min-height: 100%;
       background-position: center;
       background-size: cover;
@@ -80,14 +81,14 @@
                 <div class="text-container">
 
 {#                    <h2 style="color: #ff8000"><b>We Assist Parents</b></h2>#}
-                    <h2 style="color:white; padding: 5px; background: #ff8000;text-align: center;"><b>We Assist Parents</b></h2>
+                    <h2 style="color:white; padding: 5px; background: #ff8000;text-align: center;font-family: 'Times New Roman'"><b>We Assist Parents</b></h2>
 {#                    <hr class="w3-border-orange">#}
-                    <p style="color: #fafaf8"><b>
+                    <p style="color: #fafaf8;text-align: center"><b>
                         Autism is a developmental disorder characterized by difficulties with social interaction and
                         communication, and by restricted and repetitive behavior.
                     </b> </p>
 
-                    <h1 class="w3-center"><a class="btn-solid-lg page-scroll w3-large"  href="{% url 'about' %}">ABOUT VYOM</a></h1>
+                    <h1 class="w3-center"><a class="btn-solid-lg page-scroll w3-large" style="font-family: 'Times New Roman'" href="{% url 'about' %}">ABOUT VYOM</a></h1>
 {#                    <div class="button-container">#}
 {#                        <a class="btn-solid-reg page-scroll" href="{% url 'about' %}"><span>ABOUT LEESHA</span></a>#}
 {#                    </div>#}
@@ -95,8 +96,10 @@
             </div>
             <div class="col-lg-8">
                 <div class="image-container">
-                    <img class="img-fluid" src="{% static 'images/home_photo.jpg' %}" alt="alternative">
-                    <img class="img-fluid" src="{% static 'images/home-1.jpg' %}" alt="alternative">
+                    <img class="img-fluid" src="{% static 'images/home-2f.jpg' %}" alt="alternative">
+                    <img class="img-fluid" src="{% static 'images/home-1f.jpg' %}" alt="alternative">
+                    <img class="img-fluid" src="{% static 'images/home-3f.jpg' %}" alt="alternative">
+
                 </div>
             </div>
         </div>
@@ -105,12 +108,12 @@
 
 <div class="slider about">
     <div class="container">
-        <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;">Our Mission</h2>
+        <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Our Mission</h2>
         <div class="row align-items-center">
             <div class="col-lg-12">
 {#                <h2><b>Our Mission</b></h2>#}
                 <hr>
-                <h4 class="p-heading" style="width: 100%"><b>
+                <h4 class="p-heading" style="width: 100%;font-family: 'Times New Roman'"><b>
                     The children of Autism spectrum require help at many phases and any phase of their 
                     life journey so this is the beginning and we are there for the entire life journey.
                 </b></h4>
@@ -129,7 +132,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;">Testimonials By Parents</h2>
+                <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Testimonials By Parents</h2>
 {#                <h2 style="color: #1167b1"><b>Testimonials By Parents</b></h2>#}
                 <hr>
                 <p class="p-heading"></p>
@@ -201,6 +204,48 @@
                                             <a href="{% url 'testimonials' %}">See more</a>
                                         </div>
                                         <div class="testimonial-author " style="color: #0b0b0b">Dr. Shakha</div>
+                                    </div>
+                                </div>
+                            </div> <!-- end of swiper-slide -->
+                            <!-- end of slide -->
+
+                             <!-- Slide -->
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image" src="{% static 'images/suman.jpeg' %}" alt="alternative">
+                                    <div class="card-body">
+                                        <div class="testimonial-text">Leesha group and Vyom Autism Foundation working with children aiding their teaching learning experiences. It is facilitating ..
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author " style="color: #0b0b0b">Ms. Suman Lakra</div>
+                                    </div>
+                                </div>
+                            </div> <!-- end of swiper-slide -->
+                            <!-- end of slide -->
+
+                             <!-- Slide -->
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image" src="{% static 'images/jayashree.jpeg' %}" alt="alternative">
+                                    <div class="card-body">
+                                        <div class="testimonial-text">As a mother of a special child I liked the kind of support they are providing to the parents. I wish them a great success.
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author " style="color: #0b0b0b">Jayashree</div>
+                                    </div>
+                                </div>
+                            </div> <!-- end of swiper-slide -->
+                            <!-- end of slide -->
+
+                             <!-- Slide -->
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image" src="{% static 'images/deepika.jpeg' %}" alt="alternative">
+                                    <div class="card-body">
+                                        <div class="testimonial-text">I joined in B.Ed –Special Education thinking that the degree will give me the complete understanding. But so much lag ...
+                                            <a href="{% url 'testimonials' %}">See more</a>
+                                        </div>
+                                        <div class="testimonial-author " style="color: #0b0b0b">Mrs. Deepika</div>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
