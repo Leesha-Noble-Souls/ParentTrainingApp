@@ -11,12 +11,13 @@
 
 <!-- Services -->
     <div id="services" class="cards-2">
+    <br><br><br>
+                    <h1 style="color:white; padding: 25px; background: #ff8000;text-align: center;">SHORT COURSES</h1>
+                    <br><br>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <br><br><br>
-                    <h1 style="color:white; padding: 10px; background: #ff8000;text-align: center;">SHORT COURSES</h1>
-                    <br><br>
+
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -24,6 +25,12 @@
                     {% for course in shortCourses %}
                     <!-- Card -->
                     <div class="card">
+                    {% if course.image %}
+                       <div class="card-image">
+                            <img class="img-fluid" src={{course.image.url}} alt="alternative">
+                        </div>
+
+                        {% endif %}
                         <div class="card-body">
                             <h3>{{ course.title }}</h3>
                             <p>{{ course.details}}</p>
