@@ -7,18 +7,23 @@
 h3,h6,h5 {
   display: block;
   padding: 10px;
-  font-family: "Space Mono", monospace;
+  font-family: "Times New Roman";
   font-size: 22px;
   transition: .3s;
 }
 p{
     font-family: "Times New Roman", Times, serif;
+    padding-left: 10px;
+    font-size: 17px;
+
 }
 </style>
-<div id="intro" class="basic-1">
-    <div class="container">
+<div id="intro" class="basic-1" style="padding: 0px">
+        <img class="img-fluid-100 " src="{% static 'images/about-autism-top.jpeg' %}" alt="alternative" style="width: 100%;height: 400px">
 
-        <h1 style="color:white; padding: 10px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">ABOUT AUTISM</h1>
+    <h1 style="color:white; padding: 25px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">ABOUT AUTISM</h1>
+
+    <div class="container">
 
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -34,7 +39,7 @@ p{
                         <br>
                     </h3>
 
-                        <ol>
+                        <ol type="I">
                             <h6>
                                 <li>
                                     <a class="page-scroll" style="color: #1167b1;" href="#communication">Difficulty with social communication</a>
@@ -56,7 +61,7 @@ p{
                             <li> <a class="page-scroll" style="color: #1167b1;" href="#characterstics">Common Characteristics of Autism</a></li>
                         </h3>
                         <br>
-                        <ol type="A">
+                        <ol type="I">
                             <h6>
                                 <li>
                                     <a class="page-scroll" style="color: #1167b1;" href="#language-development">Severe delays in language development</a>
@@ -106,8 +111,7 @@ p{
             <div class="col-lg-7">
                 <div class="text-container">
                     <h3>Autism Definition</h3>
-                    <p>
-                        Autism is a complex neurodevelopmental disorder defined by the presence 
+                    <p style="padding: 10px">Autism is a complex neurodevelopmental disorder defined by the presence
                         of social deficits, abnormalities in communication, presence of stereotyped,
                         repetitive behaviours and a characteristic course. The National Trust for
                         the welfare of persons with autism, cerebral palsy, mental retardation and
@@ -168,7 +172,8 @@ p{
             <div class="col-lg-7">
                 <div class="text-container">
                     <h3>SOCIAL IMPAIRMENT IN AUTISM</h3>
-                    <ol>
+                    <h6>
+                    <ol type="I">
                         <li>
                             <h6>Difficulty with social communication</h6>
                         </li>
@@ -179,6 +184,7 @@ p{
                             <h6>Difficulty with social imagination.</h6>
                         </li>
                     </ol>
+                        </h6>
                     <p>
                         The impact of lack of socialization affect in three main areas, which is 
                         visible in almost all people with autism. These are known as the 
@@ -192,7 +198,7 @@ p{
                 </div>
             </div>
             <div class="text-container" id="communication">
-                <h5>A. Difficulty with Social Communication</h5>
+                <h5>I. Difficulty with Social Communication</h5>
                 <p>
                     People with autism can be verbal or non verbal and have difficulties with 
                     both modes of communication. Some people with autism may not speak (non verbal), 
@@ -221,7 +227,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="interaction">
-                <h5>B. Difficulty with Social Interaction</h5>
+                <h5>II. Difficulty with Social Interaction</h5>
                 <p>
                     People with autism often have difficulty in recognizing or understanding other 
                     people's emotions and feelings, and expressing their own, which can make it more 
@@ -240,7 +246,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="imagination">
-                <h5>C. Difficulty with Social Imagination</h5>
+                <h5>III. Difficulty with Social Imagination</h5>
                 <p>
                     Social imagination allows us to understand and predict other people's behaviour, make 
                     sense of abstract ideas, and to imagine situations outside our immediate daily routine. 
@@ -274,11 +280,11 @@ p{
             </div>
             <div class="col-lg-5">
                 <div class="image-container">
-                    <img class="img-fluid" src="{% static 'images/home-image2.jpeg' %}" alt="alternative" width="250" height="250">
+                    <img class="img-fluid" src="{% static 'images/common-characterstics.png' %}" alt="alternative" width="250" height="250">
                 </div>
             </div>
             <div class="text-container" id="language-development">
-                <h5>A. Severe delays in language development</h5>
+                <h5>I. Severe delays in language development</h5>
                 <p>
                     If it does develop, it usually includes peculiar speech patterns of the 
                     use of words without attachment to their normal meaning. Those who are 
@@ -287,7 +293,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="relationships">
-                <h5>B. Severe delays in understanding social relationships</h5>
+                <h5>II. Severe delays in understanding social relationships</h5>
                 <p>
                     The autistic child often avoids eye contact, resists being picked up, and 
                     seems to "tune out" the world around it. This results in a lack of co-operative 
@@ -296,7 +302,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="sensory-responses">
-                <h5>C. Inconsistent Patterns of sensory responses</h5>
+                <h5>III. Inconsistent Patterns of sensory responses</h5>
                 <p>
                     The child who has autism may appear at times to be deaf and fail to respond to words or 
                     other sounds. At other times, the same child may be extremely distressed by an everyday 
@@ -306,7 +312,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="pain">
-                <h5>D. Insensitivity to pain</h5>
+                <h5>IV. Insensitivity to pain</h5>
                 <p>
                     Self-injurious behaviour is a commonly reported problem. Many, not all, autistic 
                     children lack perception to pain. They may fall and then bruise or cut themselves 
@@ -321,7 +327,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="movements">
-                <h5>E. Repetitive body movements</h5>
+                <h5>V. Repetitive body movements</h5>
                 <p>
                     A person who has autism may perform repetitive body movements, such as hand flicking, 
                     twisting, spinning or rocking. The individual may also display repetition by following 
@@ -332,7 +338,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="intellectual-functioning">
-                <h5>F. Uneven patterns of intellectual functioning</h5>
+                <h5>VI. Uneven patterns of intellectual functioning</h5>
                 <p>
                     The individual may have peak skills, e.g. scattered things done well in relation to 
                     normal functioning - such as drawing, music, computations in math’s, or memorization 
@@ -347,7 +353,7 @@ p{
                 </p>
             </div>
             <div class="text-container" id="development">
-                <h5>G. Uneven pattern of development</h5>
+                <h5>VII. Uneven pattern of development</h5>
                 <p>
                     Characteristics of autism include an uneven pattern of development, a fascination with 
                     mechanical objects, a ritualistic response to environmental stimuli, and a resistance to 
