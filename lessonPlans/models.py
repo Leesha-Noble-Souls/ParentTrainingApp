@@ -66,9 +66,14 @@ class OnlineTraining(models.Model):
     details = models.TextField(blank=True)
     highlight = models.TextField(blank=True)
     register_link = models.URLField(blank=True)
+    image = models.ImageField(upload_to='static/images/',blank=True)
 
     def __str__(self):
         return self.title
+
+    def delete(self):
+        self.image.delete()
+        super(ShortCourses, self).delete()
 
 
 class ShortCourses(models.Model):
@@ -76,6 +81,11 @@ class ShortCourses(models.Model):
     details = models.TextField(blank=True)
     highlight = models.TextField(blank=True)
     register_link = models.URLField(blank=True)
+    image = models.ImageField(upload_to='static/images/',blank=True)
 
     def __str__(self):
         return self.title
+
+    def delete(self):
+        self.image.delete()
+        super(ShortCourses, self).delete()
