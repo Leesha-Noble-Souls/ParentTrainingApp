@@ -8,19 +8,23 @@
 <style>
     body,h1,h5 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
-    p{font-family: "Times New Roman", Times, serif}
+    p{font-family: "Times New Roman", Times, serif;    font-size: 17px;
+}
     .bgimg {
       background-image: url("../../static/images/home-1f.jpg");
       min-height: 100%;
       background-position: center;
       background-size: cover;
+        font-size: 17px;
+
+
     }
     .btn-solid-lg {
 	display: inline-block;
 	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
 	border: 0.125rem solid #ff8000;
 	border-radius: 0.25rem;
-	background-color: transparent;
+	background-color:#1167b1 ;
 	color: #FAFAF8;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
@@ -74,7 +78,8 @@
 {##}
 {#    </div>#}
 {#  </div>#}
-<div id="intro" class="basic-1" style="background-color: #1167b1;">
+
+<div id="intro" class="basic-1" style="background-color: lightsteelblue;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4">
@@ -83,9 +88,7 @@
 {#                    <h2 style="color: #ff8000"><b>We Assist Parents</b></h2>#}
                     <h2 style="color:white; padding: 5px; background: #ff8000;text-align: center;font-family: 'Times New Roman'"><b>We Assist Parents</b></h2>
 {#                    <hr class="w3-border-orange">#}
-                    <p style="color: #fafaf8;text-align: center"><b>
-                        Autism is a developmental disorder characterized by difficulties with social interaction and
-                        communication, and by restricted and repetitive behavior.
+                    <p style="color: black;text-align: center"><b>Training programs for parents, to bring the best possible potential in the child. We promote the child’s Physical, Psychological, Verbal, Academic, Spiritual journey. We train to follow a multisensory approach with practical based solutions being a part of your life journey like a family.
                     </b> </p>
 
                     <h1 class="w3-center"><a class="btn-solid-lg page-scroll w3-large" style="font-family: 'Times New Roman'" href="{% url 'about' %}">ABOUT VYOM</a></h1>
@@ -94,8 +97,10 @@
 {#                    </div>#}
                 </div>
             </div>
+{#            <div class="col-lg-1"></div>#}
             <div class="col-lg-8">
-                <div class="image-container">
+                <br><br>
+                <div class="image-container center">
                     <img class="img-fluid" src="{% static 'images/home-2f.jpg' %}" alt="alternative">
                     <img class="img-fluid" src="{% static 'images/home-1f.jpg' %}" alt="alternative">
                     <img class="img-fluid" src="{% static 'images/home-3f.jpg' %}" alt="alternative">
@@ -107,8 +112,9 @@
 </div>
 
 <div class="slider about">
+<h1 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Our Mission</h1>
     <div class="container">
-        <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Our Mission</h2>
+
         <div class="row align-items-center">
             <div class="col-lg-12">
 {#                <h2><b>Our Mission</b></h2>#}
@@ -117,22 +123,24 @@
                     The children of Autism spectrum require help at many phases and any phase of their 
                     life journey so this is the beginning and we are there for the entire life journey.
                 </b></h4>
-                <div class="image-container">
-                    <img class="img-fluid-100 " src="{% static 'images/mission.jpeg' %}" alt="alternative" width="50%">
-                </div>
+{#                <div class="image-container">#}
+{#                        <img class="img-fluid-100 " src="{% static 'images/mission.jpeg' %}" alt="alternative" style="width: 100%">#}
+{#                </div>#}
 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
 
     </div>
 </div>
+    <img class="img-fluid-100 " src="{% static 'images/mission.jpeg' %}" alt="alternative" style="width: 100%;height: 40%">
 
 <!-- Testimonials -->
 <div class="slider">
+    <h1 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Testimonials By Parents</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 style="color:white; padding: 30px; background: #ff8000;text-align: center;font-family: 'Times New Roman'">Testimonials By Parents</h2>
+
 {#                <h2 style="color: #1167b1"><b>Testimonials By Parents</b></h2>#}
                 <hr>
                 <p class="p-heading"></p>
