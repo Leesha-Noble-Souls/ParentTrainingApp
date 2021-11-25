@@ -4,26 +4,33 @@
 {% block navbar %}
 
 <style>
-    a{
+    .navbar a{
         font-family: "Times New Roman";
+        font-size: 15px;
     }
+
+
 </style>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom fixed-top" style="padding-left: 20px">
 
     <!-- Image Logo -->
-        <a  href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="alternative" height="70rem"></a>
+        <a  href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="alternative" height="70rem" width="70rem" ></a>
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-awesome fas fa-bars"></span>
         <span class="navbar-toggler-awesome fas fa-times"></span>
     </button>
     <!-- end of mobile menu toggle button -->
+    <p></p>
+    <p style="font-family:'Times New Roman';font-style: italic ;font-weight:800;color: white"><br><b>VYOM</b><br><br>Autism<br><br>Selfhelp</p>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+{#    <div class="collapse navbar-collapse">#}
+{#        <div class="nav-item" style="font-family: 'sans-serif'">#}
+{#            <a class="nav-link page-scroll" href="{% url 'home' %}" style="font-family: cursive;font-size: large"><b>Vyom</b><br><br>Autism<br><br>Selfhelp</a>#}
+{##}
+{#        <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">Vyom Autism Self-help Foundation</a></b></p>#}
+{#        </div>#}
 
-        <div class="nav-item">
-        <p><b><a class="nav-link page-scroll" href="{% url 'home' %}">Vyom Autism Self-help Foundation</a></b></p>
-        </div>
 
         <ul class="navbar-nav ml-auto nav-pills">
             <li class="nav-item">
