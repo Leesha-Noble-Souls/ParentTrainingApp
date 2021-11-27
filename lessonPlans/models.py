@@ -89,3 +89,18 @@ class ShortCourses(models.Model):
     def delete(self):
         self.image.delete()
         super(ShortCourses, self).delete()
+
+class FreeSession(models.Model):
+    title = models.CharField(max_length=200, blank=False, unique=True)
+    details = models.TextField(blank=True)
+    highlight = models.TextField(blank=True)
+    link_text = models.TextField(blank=True)
+    register_link = models.URLField(blank=True)
+    image = models.ImageField(upload_to='static/images/',blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def delete(self):
+        self.image.delete()
+        super(FreeSession, self).delete()

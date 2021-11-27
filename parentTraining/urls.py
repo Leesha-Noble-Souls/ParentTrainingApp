@@ -36,7 +36,10 @@ urlpatterns = [
     path('work_areas/', views.work_areas,name='work_areas'),
     path('assessment/', views.assessment,name='assessment'),
     path('onlineTraining/', views.onlineTraining,name='onlineTraining'),
-    path('shortCourse/', views.shortCourse,name='shortCourse')
+    path('shortCourse/', views.shortCourse,name='shortCourse'),
+    path('terms-conditions/', views.termsconditions, name='termsconditions'),
+    path('privacy-policy/', views.privacypolicy, name='privacypolicy')
+
 ]
 
 if settings.DEBUG:
